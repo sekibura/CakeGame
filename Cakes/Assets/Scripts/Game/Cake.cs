@@ -2,16 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewCake", menuName = "ScriptableObjects/Cakes", order = 1)]
-public class Cake : ScriptableObject
+public class Cake : MonoBehaviour
 {
-    [Tooltip("моделька торта")]
-    [SerializeField] private GameObject _mesh;
+    public int ID { get; set; }
+    [SerializeField]
+    private Texture _defaultTexture;
+    [SerializeField]
+    private Texture _finalTexture;
+
+    private string _lastTag = "";
 
 
-    [Tooltip("моделька торта")]
-    [SerializeField] private Texture _defaultTexture;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_lastTag == null)
+            _lastTag = other.gameObject.tag;
+        switch (_lastTag)
+        {
+            case "OvenZone":
+                ChangeTexture();
+                break;
+            case "ChooseZone":
+                ChoozeZone();
+                break;
+            case "DestroyZone":
+                DestroyCake();
+                break;
+        }
+    }
 
-    [Tooltip("моделька торта")]
-    [SerializeField] private Texture[] _textures;
+    private void OnTriggerExit(Collider other)
+    {
+        _lastTag = null;
+    }
+
+    private void DestroyCake()
+    {
+
+    }
+
+    private void ChangeTexture()
+    {
+
+    }
+
+    private void ChoozeZone()
+    {
+
+    }
 }

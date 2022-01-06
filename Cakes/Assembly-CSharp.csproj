@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,13 +53,26 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACircle.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\Scripts\Game\Cake.cs" />
-    <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACurve.cs" />
-    <Compile Include="Assets\Scripts\UI\Toggles\SwitchToggle.cs" />
-    <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnAExp.cs" />
-    <Compile Include="Assets\Scripts\Game\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
+    <Compile Include="Assets\Scripts\Test\try1.cs" />
+    <Compile Include="Assets\Scripts\Game\ObjectPoolNonSingleton.cs" />
+    <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACircle.cs" />
+    <Compile Include="Assets\Scripts\Game\CakeSO.cs" />
+    <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACurve.cs" />
+    <Compile Include="Assets\Scripts\Test\Follower.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
+    <Compile Include="Assets\Scripts\UI\Toggles\SwitchToggle.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
+    <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnAExp.cs" />
+    <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
+    <Compile Include="Assets\Scripts\Game\GameManagerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -701,6 +714,14 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{C5E9AD18-9AC0-4AC9-4D57-4A44FE8664B6}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreatorEditor.csproj">
+      <Project>{0729028C-8D7B-541C-5AB9-7B6CB7996E6E}</Project>
+      <Name>PathCreatorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{4B1B2BAA-07E4-5BDD-9FE2-37DEB81A62F1}</Project>
+      <Name>PathCreator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

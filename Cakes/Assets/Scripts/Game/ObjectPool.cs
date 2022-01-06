@@ -5,34 +5,52 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool SharedInstance;
-    public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
-    public int amountToPool;
+    private List<List<GameObject>> _pools = new List<List<GameObject>>();
+    private List<GameObject> pooledObjects;
+    private int amountToPool;
 
     private void Awake()
     {
         SharedInstance = this;
     }
 
-    private void Start()
+    
+    public void InitPools(GameObject[] objectsToPool, int amount)
     {
-        pooledObjects = new List<GameObject>();
-        GameObject tmp;
-        for (int i = 0; i < amountToPool; i++)
+        amountToPool = amount;
+        foreach (var item in objectsToPool)
         {
-            tmp = Instantiate(objectToPool);
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
+            pooledObjects = new List<GameObject>();
+            GameObject tmp;
+            for (int i = 0; i < amount; i++)
+            {
+                tmp = Instantiate(item);
+                tmp.SetActive(false);
+                pooledObjects.Add(tmp);
+            }
+            _pools.Add(pooledObjects);
         }
     }
 
-    public GameObject GetPooledObject()
+    //private void Start()
+    //{
+    //    pooledObjects = new List<GameObject>();
+    //    GameObject tmp;
+    //    for (int i = 0; i < amountToPool; i++)
+    //    {
+    //        tmp = Instantiate(objectToPool);
+    //        tmp.SetActive(false);
+    //        pooledObjects.Add(tmp);
+    //    }
+    //}
+
+    public GameObject GetPooledObject(int index)
     {
         for (int i = 0; i < amountToPool; i++)
         {
-            if (!pooledObjects[i].activeInHierarchy)
+            if (!_pools[index][i].activeInHierarchy)
             {
-                return pooledObjects[i];
+                return _pools[index][i];
             }
         }
         return null;
@@ -40,7 +58,7 @@ public class ObjectPool : MonoBehaviour
 
     #region HOW TO USE
     // Use instead instantinate:
-    //GameObject bullet = ObjectPool.SharedInstance.GetPooledObject();
+    //GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(1);
     //if (bullet != null)
     //{
     //    bullet.transform.position = turret.transform.position;
