@@ -5,21 +5,19 @@ using PathCreation;
 
 public class Follower : MonoBehaviour
 {
+    [SerializeField]
     private PathCreator _currentPath;
+    [SerializeField]
     private PathCreator _mainPath;
-    private PathCreator _leftPath;
-    private PathCreator _rightPath;
     [SerializeField]
     private float _speed = 5;
     private float distanceTravelled;
 
-    public void SetValues(PathCreator mainPath, PathCreator leftPath, PathCreator rightPath, float speed)
+    public void SetValues(PathCreator mainPath,  float speed)
     {
         _mainPath = mainPath;
-        _leftPath = leftPath;
-        _rightPath = rightPath;
         _speed = speed;
-        _currentPath = _mainPath;
+        _currentPath = mainPath;
     }
 
     private void Update()

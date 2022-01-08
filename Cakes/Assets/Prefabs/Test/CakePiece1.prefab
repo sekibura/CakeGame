@@ -335,6 +335,8 @@ GameObject:
   - component: {fileID: 8402765347856331242}
   - component: {fileID: 2940343005961871574}
   - component: {fileID: -5829638967534591372}
+  - component: {fileID: -1438367572039917064}
+  - component: {fileID: -6041511668890223080}
   m_Layer: 0
   m_Name: CakePiece1
   m_TagString: Untagged
@@ -350,8 +352,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9211917586495728464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3530407, y: 0.00000059604645, z: -3.8523965}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.4037, y: 0.87755, z: -3.9655}
+  m_LocalScale: {x: 0.13778, y: 0.13778, z: 0.13778}
   m_Children:
   - {fileID: 7014342082896003632}
   - {fileID: 5326430950168220137}
@@ -372,6 +374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e98c0cf918d78449f13c584ca870f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultMaterial: {fileID: 2100000, guid: 5c270a73328a99e439fec44a0cf3a17d, type: 2}
+  _finalMaterial: {fileID: 2100000, guid: 01763a1c279a5cd4d8f897f6b6cdbae5, type: 2}
+  LeftPosition: {x: 1.951956, y: 0.19601512, z: -1.5486577}
+  RightPosition: {x: 1.951956, y: 0.19601512, z: 1.5913423}
 --- !u!65 &-5829638967534591372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -380,8 +386,39 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9211917586495728464}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.601602, y: 2.0571706, z: 1}
   m_Center: {x: 0.27810216, y: 1.0177776, z: 0}
+--- !u!114 &-1438367572039917064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211917586495728464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba0ffd0558732d49b54bd52ec72c135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentPath: {fileID: 0}
+  _mainPath: {fileID: 0}
+  _speed: 2
+--- !u!54 &-6041511668890223080
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211917586495728464}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0

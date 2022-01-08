@@ -56,6 +56,10 @@ public class ObjectPool : MonoBehaviour
         return null;
     }
 
+    public List<List<GameObject>> GetPools()
+    {
+        return _pools;
+    }
     #region HOW TO USE
     // Use instead instantinate:
     //GameObject bullet = ObjectPool.SharedInstance.GetPooledObject(1);

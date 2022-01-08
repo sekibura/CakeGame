@@ -24,27 +24,55 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     private PathCreator _rightPath;
 
-    private float _timeBetweenSpawn = 0f;
+    [SerializeField]
+    private Transform _leftBoxPosition;
+    [SerializeField]
+    private Transform _rightBoxPosition;
+
+    private float _timeBetweenSpawn = 2f;
     private float _lastTimeSpawn = 0f;
-    private float _speedMoving = 0.5f;
+    private float _speedMoving = 2f;
     private int _stage = 1;
+    private bool _isReadyForUpdate = false;
   
 
     private void Start()
     {
-        InitCakes();
         InitPools();
+        InitCakes();
         InitPipeQueue();
+        _isReadyForUpdate = true;
         
     }
 
     private void InitCakes()
     {
+        var pools = ObjectPool.SharedInstance.GetPools();
+
         for (int i = 0; i < _cakes.Length; i++)
         {
-            _cakes[i].GetComponent<Cake>().ID = i;
-            _cakes[i].GetComponent<Follower>().SetValues(_mainPath, _leftPath, _rightPath, _speedMoving);
+            foreach (var item in pools[i])
+            {
+                Cake cake = item.GetComponent<Cake>();
+                cake.ID = i;
+                cake.GameManager = gameObject.GetComponent<GameManagerScript>();
+                cake.LeftPosition = _leftBoxPosition.position;
+                cake.RightPosition = _rightBoxPosition.position;
+
+                item.GetComponent<Follower>().SetValues(_mainPath, _speedMoving);
+            }
         }
+
+        //for (int i = 0; i < _cakes.Length; i++)
+        //{
+        //    Cake cake = _cakes[i].GetComponent<Cake>();
+        //    cake.ID = i;
+        //    cake.GameManager = gameObject.GetComponent<GameManagerScript>();
+        //    cake.LeftPosition = _leftBoxPosition.position;
+        //    cake.RightPosition = _rightBoxPosition.position;
+
+        //    _cakes[i].GetComponent<Follower>().SetValues(_mainPath, _speedMoving);
+        //}
     }
 
     private void InitPools()
@@ -63,7 +91,8 @@ public class GameManagerScript : MonoBehaviour
 
     private void Update()
     {
-        InstantinateCakes();
+        if(_isReadyForUpdate)
+            InstantinateCakes();
     }
 
     private void CreateOrder(List<int> order, int maxLengthOrder)
@@ -80,8 +109,12 @@ public class GameManagerScript : MonoBehaviour
             _pipeQueue.RemoveAt(0);
 
             GameObject cake =  ObjectPool.SharedInstance.GetPooledObject(index);
-            cake.SetActive(true);
-            _lastTimeSpawn = Time.time;
+            if (cake != null)
+            {
+                cake.SetActive(true);
+                _lastTimeSpawn = Time.time;
+            }
+            
         }
     }
 
@@ -107,6 +140,16 @@ public class GameManagerScript : MonoBehaviour
 
     }
 
+    public void GameOver()
+    {
+        Debug.LogWarning("GameOver!");
+    }
+
+    public void AddToOrder(Sides side, int ID)
+    {
+        Debug.Log("Add to order: " + side + " - " + ID);
+    }
+
 
     private void RandomWithoutDublicate(List<int> order, (int,int) range, int count)
     {
@@ -129,6 +172,7 @@ public class GameManagerScript : MonoBehaviour
         }
         Debug.Log(s);
     }
+
 }
 
 public static class ListExtension
@@ -150,5 +194,6 @@ public static class ListExtension
 public enum Sides
 {
     Left,
-    Right
+    Right,
+    NoSide
 }
