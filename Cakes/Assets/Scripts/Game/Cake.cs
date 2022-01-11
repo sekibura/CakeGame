@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 
 public class Cake : MonoBehaviour
 {
@@ -40,6 +44,9 @@ public class Cake : MonoBehaviour
         if(_follower==null)
             _follower = gameObject.GetComponent<Follower>();
         _follower.enabled = true;
+        _lastTag = null;
+        _isMoving = false;
+        SetMaterial(_defaultMaterial);
     }
 
     private void Update()
@@ -55,7 +62,7 @@ public class Cake : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
+        //Debug.Log(other.gameObject.tag);
         if (_lastTag == null)
         {
             _lastTag = other.gameObject.tag;
@@ -116,13 +123,13 @@ public class Cake : MonoBehaviour
 
         _color = Color.green;
         Sides side = Sides.NoSide;
-        if (SwipeInput.swipedLeft)
+        if (SwipeInput.swipedLeft || GameManager.GetOrder(ID) == Sides.Left)
         {
             Debug.Log("SwipeLeft");
             side = Sides.Left;
             _currentTargetToMove = LeftPosition;
         }
-        else if(SwipeInput.swipedRight)
+        else if(SwipeInput.swipedRight || GameManager.GetOrder(ID) == Sides.Right)
         {
             Debug.Log("SwipeRight");
             side = Sides.Right;
@@ -133,11 +140,9 @@ public class Cake : MonoBehaviour
         {
             _follower.enabled = false;
             _isMoving = true;
-            GameManager.AddToOrder(side, ID);
+            GameManager.AddToBox(side, ID);
         }
 
-
-        
     }
 
     private void SetMaterial(Material material)
@@ -158,10 +163,20 @@ public class Cake : MonoBehaviour
             }
         }
     }
+
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.color = _color;
         Gizmos.DrawSphere(transform.position, 0.3f);
+
+        Vector3 a = new Vector3(transform.position.x, transform.position.y+2, transform.position.z);
+        GUIStyle style = new GUIStyle();
+        style.fontSize = 100;
+        
+        Handles.Label(a, ID.ToString(), style);
     }
+#endif
+
 }
 

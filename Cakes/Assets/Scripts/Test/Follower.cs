@@ -13,11 +13,20 @@ public class Follower : MonoBehaviour
     private float _speed = 5;
     private float distanceTravelled;
 
+
     public void SetValues(PathCreator mainPath,  float speed)
     {
         _mainPath = mainPath;
         _speed = speed;
         _currentPath = mainPath;
+    }
+    public void SetSpeed(float speed)
+    {
+        _speed = speed;
+    }
+    private void OnEnable()
+    {
+        distanceTravelled = 0;
     }
 
     private void Update()

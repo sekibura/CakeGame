@@ -1,10 +1,39 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - SwitchToggle
-    - ntw.CurvedTextMeshPro.TextProOnACircle
+    - Cake
+    - Follower
+    - GameManagerScript
+    - ObjectPool
+    - ScreenScript
+    - SwipeInput
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
+    IngameDebugConsole.Runtime.dll:
+    - IngameDebugConsole.DebugLogItem
+    - IngameDebugConsole.DebugLogManager
+    - IngameDebugConsole.DebugLogPopup
+    - IngameDebugConsole.DebugLogRecycledListView
+    - IngameDebugConsole.DebugLogResizeListener
+    - IngameDebugConsole.DebugsOnScrollListener
+    PathCreator.dll:
+    - PathCreation.PathCreator
+    Tayx.Graphy.dll:
+    - Tayx.Graphy.Advanced.G_AdvancedData
+    - Tayx.Graphy.Audio.G_AudioGraph
+    - Tayx.Graphy.Audio.G_AudioManager
+    - Tayx.Graphy.Audio.G_AudioMonitor
+    - Tayx.Graphy.Audio.G_AudioText
+    - Tayx.Graphy.Fps.G_FpsGraph
+    - Tayx.Graphy.Fps.G_FpsManager
+    - Tayx.Graphy.Fps.G_FpsMonitor
+    - Tayx.Graphy.Fps.G_FpsText
+    - Tayx.Graphy.GraphyDebugger
+    - Tayx.Graphy.GraphyManager
+    - Tayx.Graphy.Ram.G_RamGraph
+    - Tayx.Graphy.Ram.G_RamManager
+    - Tayx.Graphy.Ram.G_RamMonitor
+    - Tayx.Graphy.Ram.G_RamText
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -28,16 +57,25 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.InputField
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Shadow
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Main.unity:
+    Assets/Scenes/GamePlay.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -46,11 +84,23 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -61,40 +111,112 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1472}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1622}
     - Class: 114
-      Script: {instanceID: 1672}
+      Script: {instanceID: 1674}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1692}
     - Class: 114
-      Script: {instanceID: 2036}
+      Script: {instanceID: 1746}
     - Class: 114
-      Script: {instanceID: 2358}
+      Script: {instanceID: 2042}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2054}
     - Class: 114
-      Script: {instanceID: 2516}
+      Script: {instanceID: 2206}
     - Class: 114
-      Script: {instanceID: 2650}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2800}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 2376}
     - Class: 114
-      Script: {instanceID: 2928}
+      Script: {instanceID: 2490}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 2536}
     - Class: 114
-      Script: {instanceID: 3750}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 3938}
+      Script: {instanceID: 2718}
     - Class: 114
-      Script: {instanceID: 4210}
+      Script: {instanceID: 2858}
+    - Class: 114
+      Script: {instanceID: 2870}
+    - Class: 114
+      Script: {instanceID: 2880}
+    - Class: 114
+      Script: {instanceID: 2958}
+    - Class: 114
+      Script: {instanceID: 3238}
+    - Class: 114
+      Script: {instanceID: 3290}
+    - Class: 114
+      Script: {instanceID: 3298}
+    - Class: 114
+      Script: {instanceID: 3522}
+    - Class: 114
+      Script: {instanceID: 3542}
+    - Class: 114
+      Script: {instanceID: 3880}
+    - Class: 114
+      Script: {instanceID: 3964}
+    - Class: 114
+      Script: {instanceID: 3986}
+    - Class: 114
+      Script: {instanceID: 4264}
+    - Class: 114
+      Script: {instanceID: 4718}
+    - Class: 114
+      Script: {instanceID: 4732}
+    - Class: 114
+      Script: {instanceID: 25076}
+    - Class: 114
+      Script: {instanceID: 25078}
+    - Class: 114
+      Script: {instanceID: 25080}
+    - Class: 114
+      Script: {instanceID: 25086}
+    - Class: 114
+      Script: {instanceID: 25088}
+    - Class: 114
+      Script: {instanceID: 25094}
+    - Class: 114
+      Script: {instanceID: 25098}
+    - Class: 114
+      Script: {instanceID: 25106}
+    - Class: 114
+      Script: {instanceID: 25114}
+    - Class: 114
+      Script: {instanceID: 25116}
+    - Class: 114
+      Script: {instanceID: 25118}
+    - Class: 114
+      Script: {instanceID: 25122}
+    - Class: 114
+      Script: {instanceID: 25124}
+    - Class: 114
+      Script: {instanceID: 25126}
+    - Class: 114
+      Script: {instanceID: 25128}
+    - Class: 114
+      Script: {instanceID: 28392}
+    - Class: 114
+      Script: {instanceID: 28396}
+    - Class: 114
+      Script: {instanceID: 28400}
+    - Class: 114
+      Script: {instanceID: 28406}
+    - Class: 114
+      Script: {instanceID: 28414}
+    - Class: 114
+      Script: {instanceID: 28420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -107,6 +229,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -121,6 +245,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 14285c3bd5db9ec1880c467fd290624a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PathCreation.Examples
+    className: PathSpawner
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -171,6 +301,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: b233df5c6f9cea11b87e4e515556b495
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PathCreation.Examples
+    className: GeneratePathExample
+  - hash:
+      serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -207,6 +343,24 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: e9252001822c8f860592868b723e70ba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Cake
+  - hash:
+      serializedVersion: 2
+      Hash: 5455126194c7fb60e2136719105446c8
+    assemblyName: PathCreator.dll
+    namespaceName: PathCreation
+    className: PathCreator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectPool
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -223,6 +377,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 0eaba8fcbfa6859be3e02bfe60166ccf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PathCreation.Examples
+    className: PathPlacer
   - hash:
       serializedVersion: 2
       Hash: fe64a45214940b510a0ec79c96d43498
@@ -247,6 +407,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: try1
+  - hash:
+      serializedVersion: 2
+      Hash: 01c549534db5a4fd7b30a759f80d0ffe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectPoolNonSingleton
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -289,6 +461,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: ntw.CurvedTextMeshPro
     className: TextProOnACircle
+  - hash:
+      serializedVersion: 2
+      Hash: 216b1d5813ceb51d37c8311004cd109b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CakeSO
+  - hash:
+      serializedVersion: 2
+      Hash: 6ba7ce67a17d043086be56aa69d8c106
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Follower
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -435,6 +619,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 39812a95e28916e8c4f8a45139ca1913
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScreenScript
+  - hash:
+      serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -463,6 +653,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SwitchToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 2023515a447b9089d205e8fe2ea2e7ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PathCreation.Examples
+    className: PathFollower
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -513,6 +709,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 1532436743ef194dbf67c97ed7b8e9f1
+    assemblyName: PathCreator.dll
+    namespaceName: PathCreation
+    className: GlobalDisplaySettings
+  - hash:
+      serializedVersion: 2
       Hash: 8a2edb618ab33fd86995f38830aeadf8
     assemblyName: Assembly-CSharp.dll
     namespaceName: ntw.CurvedTextMeshPro
@@ -549,6 +751,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: bfd0fa381ea0fbb32773b78e2b1e2c06
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PathCreation.Examples
+    className: RoadMeshCreator
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -559,7 +767,145 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: c0a1fdf1a6ef4ca49e5eaa932f86ad73
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManagerScript
+  - hash:
+      serializedVersion: 2
+      Hash: 7243b1406993cbe36179ce4a70e03410
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwipeInput
+  - hash:
+      serializedVersion: 2
+      Hash: ca47b9266be6fe740b2cc81e82e5e114
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy
+    className: GraphyManager
+  - hash:
+      serializedVersion: 2
+      Hash: f2503778758bbd5f67876697aacf87cb
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioGraph
+  - hash:
+      serializedVersion: 2
+      Hash: ff9f6dc0f9591445d4193bbb7396df28
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioText
+  - hash:
+      serializedVersion: 2
+      Hash: 059e947208fbd17dc6d5d52ada6a4827
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamManager
+  - hash:
+      serializedVersion: 2
+      Hash: 07b10ec6743430d549314b87e8e67f9d
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioManager
+  - hash:
+      serializedVersion: 2
+      Hash: c4291324b051f8a955ba47077a7a2451
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy
+    className: GraphyDebugger
+  - hash:
+      serializedVersion: 2
+      Hash: 407cd073e918be72093f98306fb47a6f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Advanced
+    className: G_AdvancedData
+  - hash:
+      serializedVersion: 2
+      Hash: e1ee2d6edc5c544555d337d300c56ac6
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsManager
+  - hash:
+      serializedVersion: 2
+      Hash: e95b5849b54502016fabc01a9ec4ad29
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamText
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioMonitor
+  - hash:
+      serializedVersion: 2
+      Hash: 994285ef78f1b8664eba320929ff05d0
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamGraph
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsMonitor
+  - hash:
+      serializedVersion: 2
+      Hash: 1f7917ac8bd6b5986f92e8d7ff9c5880
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsText
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamMonitor
+  - hash:
+      serializedVersion: 2
+      Hash: 7bdf56a97cc079197905c82e751ab3db
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsGraph
+  - hash:
+      serializedVersion: 2
+      Hash: 45763c5633962fe4e7ad13b675515e66
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogResizeListener
+  - hash:
+      serializedVersion: 2
+      Hash: 608722e9939bb48b72e35920b911d194
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogRecycledListView
+  - hash:
+      serializedVersion: 2
+      Hash: 150d2705ec079b79d52ccce665aab8e1
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogPopup
+  - hash:
+      serializedVersion: 2
+      Hash: 9b070fd11003a7ac517c876788f0fb2a
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugsOnScrollListener
+  - hash:
+      serializedVersion: 2
+      Hash: 698ee8e8df65f02b2ae534f8cb52a856
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogItem
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1afab26586f4310783842d18c28473
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogManager
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Main.unity
-  playerPath: D:/3d_dev/Unity/CakeGame/Cakes/buildAndroid.apk
+  - Assets/Scenes/GamePlay.unity
+  playerPath: D:/3d_dev/Unity/CakeGame/Cakes/Build/buildAndroid.apk

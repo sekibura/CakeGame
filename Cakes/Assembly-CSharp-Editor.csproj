@@ -733,6 +733,22 @@
       <Project>{0729028C-8D7B-541C-5AB9-7B6CB7996E6E}</Project>
       <Name>PathCreatorEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="Tayx.Graphy.Editor.csproj">
+      <Project>{3759A10F-3BC0-EFD6-32C6-5BE0459BB417}</Project>
+      <Name>Tayx.Graphy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Tayx.Graphy.csproj">
+      <Project>{2D718B4A-B283-ED7E-803C-6474FDC47950}</Project>
+      <Name>Tayx.Graphy</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
+      <Project>{2E17E183-9E54-AE47-183E-125D908AD8E2}</Project>
+      <Name>IngameDebugConsole.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
+      <Project>{5920F155-945A-82FA-359A-92DB15943836}</Project>
+      <Name>IngameDebugConsole.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="PathCreator.csproj">
       <Project>{4B1B2BAA-07E4-5BDD-9FE2-37DEB81A62F1}</Project>
       <Name>PathCreator</Name>
