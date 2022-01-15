@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScreenScript : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI _textField;
+    [SerializeField]
+    private Image[] _images;
     
 
-    private void Start()
-    {
-        //_textField.text = "loh";
-    }
+
     public void Set(List<int> order)
     {
         //Debug.Log("order count to display: " + order.Count);
@@ -24,8 +24,21 @@ public class ScreenScript : MonoBehaviour
         _textField.text = str;
         //Debug.Log("order to display: " + str);
     }
-    //private void Update()
-    //{
-    //    _textField.text = (Random.Range(0,100).ToString());
-    //}
+    public void Set(List<Sprite> order)
+    {
+        for (int i = 0; i < _images.Length; i++)
+        {
+            if(i < order.Count)
+            {
+                _images[i].enabled = true;
+                _images[i].sprite = order[i];
+
+            }
+            else
+            {
+                _images[i].enabled = false;
+            }
+        }
+    }
+    
 }

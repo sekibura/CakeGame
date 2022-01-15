@@ -53,6 +53,8 @@ public class GameManagerScript : MonoBehaviour
     private List<int> spawned = new List<int>();
     private List<Follower> spawnedFollower = new List<Follower>();
 
+    private int _currentScore = 0;
+
 
     private void Start()
     {
@@ -227,10 +229,7 @@ public class GameManagerScript : MonoBehaviour
         if((_startSpeedMoving + _stage * _stepSpeedIncrease) <_maxSpeedMoving)
         {
             _currentSpeedMoving = _startSpeedMoving + _stage * _stepSpeedIncrease;
-            foreach (var item in spawnedFollower)
-            {
-                item.SetSpeed(_currentSpeedMoving);
-            }
+            SetSpeedCakes(_currentSpeedMoving);
 
             _timeBetweenSpawn = _deltaS / _currentSpeedMoving;
         }
@@ -268,6 +267,7 @@ public class GameManagerScript : MonoBehaviour
             if (_leftOrders.Peek().Count == 0)
             {
                 Debug.Log("order finished! ");
+                AddScorePoints();
                 _leftOrders.Dequeue();
                 NewOrder(Sides.Left);
                 //NewNewOrder();
@@ -284,6 +284,7 @@ public class GameManagerScript : MonoBehaviour
             if (_rightOrders.Peek().Count == 0)
             {
                 Debug.Log("order finished! ");
+                AddScorePoints();
                 _rightOrders.Dequeue();
                 NewOrder(Sides.Right);
                 //NewNewOrder();
@@ -291,6 +292,26 @@ public class GameManagerScript : MonoBehaviour
             //UpdateScreen(Sides.Right);
         }
         UpdateScreen();
+    }
+
+    private void AddScorePoints()
+    {
+        _currentScore++;
+
+        //TODO
+        //UpdateScoreScreen
+
+        if (ScoreSystem.Instance.SetMaxScore(_currentScore))
+        {
+            //play max score animation
+        }
+    }
+    private void SetSpeedCakes(float value)
+    {
+        foreach (var item in spawnedFollower)
+        {
+            item.SetSpeed(value);
+        }
     }
 
     private void RandomWithoutDublicate(List<int> order, (int,int) range, int count)
@@ -342,11 +363,45 @@ public class GameManagerScript : MonoBehaviour
     }
 
     private void UpdateScreen()
-    {   
-        if(_leftOrders.Count>0)
+    {
+        List<Sprite> sprites = new List<Sprite>();
+        if (_leftOrders.Count > 0)
+        {
             _screenLeft.Set(_leftOrders.Peek());
+            InitImagesList(sprites, _leftOrders.Peek());
+            _screenLeft.Set(sprites);
+        }
         if (_rightOrders.Count > 0)
+        {
             _screenRight.Set(_rightOrders.Peek());
+            InitImagesList(sprites, _rightOrders.Peek());
+            _screenRight.Set(sprites);
+        }
+            
+    }
+    private void InitImagesList(List<Sprite> sprites, List<int> ordersID)
+    {
+        sprites.Clear();
+        foreach (var item in ordersID)
+        {
+            sprites.Add(_cakes[item].GetComponent<Cake>().GetSprite());
+        }
+    }
+
+    public void SetPause(bool value)
+    {
+        if (value)
+        {
+            Time.timeScale = 0;
+            //SetSpeedCakes(0);
+            //_isReadyForUpdate = false;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            //SetSpeedCakes(_currentSpeedMoving);
+            //_isReadyForUpdate = true;
+        }
     }
 }
 
@@ -374,3 +429,14 @@ public enum Sides
     Right,
     NoSide
 }
+
+//public struct CakeOrder
+//{
+//    public int ID;
+//    public Sprite Image;
+//    public CakeOrder(int id, Sprite image)
+//    {
+//        ID = id;
+//        Image = image;
+//    }
+//}

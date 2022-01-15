@@ -16,6 +16,8 @@ public class Cake : MonoBehaviour
     [SerializeField]
     private Material _finalMaterial;
     private List<MeshRenderer> _meshRenderers = new List<MeshRenderer>();
+    [SerializeField]
+    private Sprite _cakeIcon;
 
     private Follower _follower;
 
@@ -25,12 +27,13 @@ public class Cake : MonoBehaviour
     private Vector3 _currentTargetToMove;
     private bool _isMoving = false;
 
-
     private string _lastTag = null;
 
-    
     private float _speedMovingToBox = 5f;
     private Color _color;
+
+    [SerializeField]
+    private AudioSource _chooseSound;
 
     private void Start()
     {
@@ -135,6 +138,7 @@ public class Cake : MonoBehaviour
             side = Sides.Right;
             _currentTargetToMove = RightPosition;
         }
+        _chooseSound.Play();
 
         if (side != Sides.NoSide)
         {
@@ -159,7 +163,9 @@ public class Cake : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
-                _meshRenderers.Add(child.GetComponent<MeshRenderer>());
+                var mesh = child.GetComponent<MeshRenderer>();
+                if(mesh!=null)
+                    _meshRenderers.Add(mesh);
             }
         }
     }
@@ -177,6 +183,9 @@ public class Cake : MonoBehaviour
         Handles.Label(a, ID.ToString(), style);
     }
 #endif
-
+    public Sprite GetSprite()
+    {
+        return _cakeIcon;
+    }
 }
 

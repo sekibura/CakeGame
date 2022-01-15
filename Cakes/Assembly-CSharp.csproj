@@ -60,6 +60,7 @@
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\Scripts\Game\Cake.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\UI\GamePlayUI.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
     <Compile Include="Assets\Scripts\Test\try1.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectPoolNonSingleton.cs" />
@@ -75,6 +76,9 @@
     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\Scripts\Game\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\Input\SwipeInput.cs" />
+    <Compile Include="Assets\Scripts\Settings\GameSettings.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\Settings\ScoreSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

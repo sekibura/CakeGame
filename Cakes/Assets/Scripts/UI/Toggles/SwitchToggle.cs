@@ -32,15 +32,15 @@ public class SwitchToggle : MonoBehaviour {
          OnSwitch (true) ;
    }
 
-   void OnSwitch (bool on) {
-      //uiHandleRectTransform.anchoredPosition = on ? handlePosition * -1 : handlePosition ; // no anim
-      uiHandleRectTransform.DOAnchorPos (on ? handlePosition * -1 : handlePosition, .4f).SetEase (Ease.InOutBack) ;
+   public void OnSwitch (bool on) {
+      uiHandleRectTransform.anchoredPosition = on ? handlePosition * -1 : handlePosition ; // no anim
+      //uiHandleRectTransform.DOAnchorPos (on ? handlePosition * -1 : handlePosition, .4f).SetEase (Ease.InOutBack) ;
 
-      //backgroundImage.color = on ? backgroundActiveColor : backgroundDefaultColor ; // no anim
-      backgroundImage.DOColor (on ? backgroundActiveColor : backgroundDefaultColor, .6f) ;
+      backgroundImage.color = on ? backgroundActiveColor : backgroundDefaultColor ; // no anim
+      //backgroundImage.DOColor (on ? backgroundActiveColor : backgroundDefaultColor, .6f) ;
 
-      //handleImage.color = on ? handleActiveColor : handleDefaultColor ; // no anim
-      handleImage.DOColor (on ? handleActiveColor : handleDefaultColor, .4f) ;
+      handleImage.color = on ? handleActiveColor : handleDefaultColor ; // no anim
+      //handleImage.DOColor (on ? handleActiveColor : handleDefaultColor, .4f) ;
    }
 
    void OnDestroy ( ) {
