@@ -68,17 +68,17 @@
     <Compile Include="Assets\Scripts\Game\CakeSO.cs" />
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACurve.cs" />
     <Compile Include="Assets\Scripts\Test\Follower.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\Settings\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Game\ScreenScript.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\Scripts\UI\Toggles\SwitchToggle.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnAExp.cs" />
+    <Compile Include="Assets\Scripts\Settings\ScoreSystem.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\Scripts\Game\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\Input\SwipeInput.cs" />
-    <Compile Include="Assets\Scripts\Settings\GameSettings.cs" />
-    <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
-    <Compile Include="Assets\Scripts\Settings\ScoreSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

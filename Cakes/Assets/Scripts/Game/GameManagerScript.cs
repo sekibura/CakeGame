@@ -53,6 +53,7 @@ public class GameManagerScript : MonoBehaviour
     private List<int> spawned = new List<int>();
     private List<Follower> spawnedFollower = new List<Follower>();
 
+    //очки за каждый правильный заказ
     private int _currentScore = 0;
 
 
@@ -91,21 +92,8 @@ public class GameManagerScript : MonoBehaviour
     }
     private void InitPipeQueue()
     {
-        //var left = CreateOrder(3);
-        //var right = CreateOrder(3);
-
-        //_leftOrders.Add(left);
-        //_rightOrders.Add(right);
-
-        //_pipeQueue.AddRange(left);
-        //_pipeQueue.AddRange(right);
-
-        //_pipeQueue.Shuffle();
-
         NewOrder(Sides.Left);
         NewOrder(Sides.Right);
-
-        //NewNewOrder();
     }
     private void Update()
     {
@@ -131,11 +119,9 @@ public class GameManagerScript : MonoBehaviour
 
 
             //choose index
-            //var intersect = _leftOrders.Intersect(_rightOrders).ToList();
             var summ = _leftOrders.Peek().Concat(_rightOrders.Peek()).Except(spawned).ToList();
             if (summ.Count == 0)
                 return;
-            //var intersect = _pipeQueue.Intersect(summ).ToList();
             int index = 0;
          
            
@@ -145,13 +131,6 @@ public class GameManagerScript : MonoBehaviour
             int indexinList = _pipeQueue.IndexOf(value);
             index = value;
             _pipeQueue.RemoveAt(indexinList);
-
-            
-            
-          
-
-            //index = _pipeQueue[0];
-            //_pipeQueue.RemoveAt(0);
 
 
             GameObject cake =  ObjectPool.SharedInstance.GetPooledObject(index);
@@ -238,10 +217,7 @@ public class GameManagerScript : MonoBehaviour
             Debug.LogWarning("Max speed ! Time = " + Time.realtimeSinceStartup);
         }
 
-        //if (( _startTimeBetweenSpawn - _stepTimeBetweenSpawn * _stage) > _minTimeBetweenSpawn)
-        //{
-        //    _timeBetweenSpawn = _startTimeBetweenSpawn - _stage * _stepTimeBetweenSpawn;
-        //}
+     
 
         Debug.Log("current speed = "+_currentSpeedMoving+ "\ntime = "+_timeBetweenSpawn);
     }
@@ -267,14 +243,11 @@ public class GameManagerScript : MonoBehaviour
             if (_leftOrders.Peek().Count == 0)
             {
                 Debug.Log("order finished! ");
-                AddScorePoints();
+                AddFinishedOrder();
                 _leftOrders.Dequeue();
                 NewOrder(Sides.Left);
-                //NewNewOrder();
             }
-            //UpdateScreen(Sides.Left);
         }
-
         else if (side == Sides.Right)
         {
             if (!_rightOrders.Peek().Contains(ID))
@@ -284,28 +257,32 @@ public class GameManagerScript : MonoBehaviour
             if (_rightOrders.Peek().Count == 0)
             {
                 Debug.Log("order finished! ");
-                AddScorePoints();
+                AddFinishedOrder();
                 _rightOrders.Dequeue();
                 NewOrder(Sides.Right);
-                //NewNewOrder();
             }
-            //UpdateScreen(Sides.Right);
         }
         UpdateScreen();
     }
 
-    private void AddScorePoints()
+    
+   
+    //очки за законченный заказ
+    private void AddFinishedOrder()
     {
         _currentScore++;
-
-        //TODO
-        //UpdateScoreScreen
-
         if (ScoreSystem.Instance.SetMaxScore(_currentScore))
         {
-            //play max score animation
+            //play anim new max score
+            
+            //update screen score
+        }
+        else
+        {
+            //update screen score
         }
     }
+
     private void SetSpeedCakes(float value)
     {
         foreach (var item in spawnedFollower)
@@ -429,14 +406,3 @@ public enum Sides
     Right,
     NoSide
 }
-
-//public struct CakeOrder
-//{
-//    public int ID;
-//    public Sprite Image;
-//    public CakeOrder(int id, Sprite image)
-//    {
-//        ID = id;
-//        Image = image;
-//    }
-//}

@@ -4,9 +4,15 @@ ScriptsOnlyBuild:
     - Cake
     - Follower
     - GameManagerScript
+    - GamePlayUI
+    - GameSettings
+    - MainMenuUI
     - ObjectPool
+    - ScoreSystem
     - ScreenScript
     - SwipeInput
+    - SwitchToggle
+    - ntw.CurvedTextMeshPro.TextProOnACircle
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     IngameDebugConsole.Runtime.dll:
@@ -52,6 +58,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -63,16 +77,20 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/GamePlay.unity:
@@ -94,124 +112,134 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 1622}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1674}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1692}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 1646}
     - Class: 114
-      Script: {instanceID: 2042}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 2054}
+      Script: {instanceID: 1700}
     - Class: 114
-      Script: {instanceID: 2206}
+      Script: {instanceID: 1702}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 1722}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 2376}
+      Script: {instanceID: 1988}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 2006}
     - Class: 114
-      Script: {instanceID: 2536}
+      Script: {instanceID: 2198}
     - Class: 114
-      Script: {instanceID: 2676}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 2316}
     - Class: 114
-      Script: {instanceID: 2858}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2426}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2460}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 3238}
+      Script: {instanceID: 2546}
     - Class: 114
-      Script: {instanceID: 3290}
+      Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3522}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 3542}
+      Script: {instanceID: 2924}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 2946}
     - Class: 114
-      Script: {instanceID: 3986}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 4264}
+      Script: {instanceID: 3026}
     - Class: 114
-      Script: {instanceID: 4718}
+      Script: {instanceID: 3032}
     - Class: 114
-      Script: {instanceID: 4732}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 25076}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 25078}
+      Script: {instanceID: 3176}
     - Class: 114
-      Script: {instanceID: 25080}
+      Script: {instanceID: 3196}
     - Class: 114
-      Script: {instanceID: 25086}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 25088}
+      Script: {instanceID: 3384}
     - Class: 114
-      Script: {instanceID: 25094}
+      Script: {instanceID: 3464}
     - Class: 114
-      Script: {instanceID: 25098}
+      Script: {instanceID: 3532}
     - Class: 114
-      Script: {instanceID: 25106}
+      Script: {instanceID: 3616}
     - Class: 114
-      Script: {instanceID: 25114}
+      Script: {instanceID: 3636}
     - Class: 114
-      Script: {instanceID: 25116}
+      Script: {instanceID: 3766}
     - Class: 114
-      Script: {instanceID: 25118}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 25122}
+      Script: {instanceID: 3834}
     - Class: 114
-      Script: {instanceID: 25124}
+      Script: {instanceID: 3896}
     - Class: 114
-      Script: {instanceID: 25126}
+      Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 25128}
+      Script: {instanceID: 3934}
     - Class: 114
-      Script: {instanceID: 28392}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 28396}
+      Script: {instanceID: 4074}
     - Class: 114
-      Script: {instanceID: 28400}
+      Script: {instanceID: 4330}
     - Class: 114
-      Script: {instanceID: 28406}
+      Script: {instanceID: 4388}
     - Class: 114
-      Script: {instanceID: 28414}
+      Script: {instanceID: 4758}
     - Class: 114
-      Script: {instanceID: 28420}
+      Script: {instanceID: 4842}
+    - Class: 114
+      Script: {instanceID: 4856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,6 +260,113 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    Assets/Scenes/Main.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1486}
+    - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 1490}
+    - Class: 114
+      Script: {instanceID: 1700}
+    - Class: 114
+      Script: {instanceID: 1782}
+    - Class: 114
+      Script: {instanceID: 2090}
+    - Class: 114
+      Script: {instanceID: 2426}
+    - Class: 114
+      Script: {instanceID: 2546}
+    - Class: 114
+      Script: {instanceID: 2594}
+    - Class: 114
+      Script: {instanceID: 2892}
+    - Class: 114
+      Script: {instanceID: 2936}
+    - Class: 114
+      Script: {instanceID: 3026}
+    - Class: 114
+      Script: {instanceID: 3204}
+    - Class: 114
+      Script: {instanceID: 3322}
+    - Class: 114
+      Script: {instanceID: 3376}
+    - Class: 114
+      Script: {instanceID: 3428}
+    - Class: 114
+      Script: {instanceID: 3532}
+    - Class: 114
+      Script: {instanceID: 3830}
+    - Class: 114
+      Script: {instanceID: 3898}
+    - Class: 114
+      Script: {instanceID: 3988}
+    - Class: 114
+      Script: {instanceID: 4096}
+    - Class: 114
+      Script: {instanceID: 4380}
+    - Class: 114
+      Script: {instanceID: 4678}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -239,6 +374,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -251,12 +404,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: PathCreation.Examples
     className: PathSpawner
-  - hash:
-      serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -277,6 +424,12 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsMonitor
+  - hash:
+      serializedVersion: 2
       Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -293,6 +446,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 059e947208fbd17dc6d5d52ada6a4827
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamManager
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -313,6 +472,18 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 994285ef78f1b8664eba320929ff05d0
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamGraph
+  - hash:
+      serializedVersion: 2
+      Hash: 1f7917ac8bd6b5986f92e8d7ff9c5880
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsText
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -325,16 +496,16 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: e1ee2d6edc5c544555d337d300c56ac6
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsManager
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -343,7 +514,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: e9252001822c8f860592868b723e70ba
+      Hash: 4b20d0feaa77ca9296bdd86b615c4aac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Cake
@@ -365,6 +536,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 7bdf56a97cc079197905c82e751ab3db
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Fps
+    className: G_FpsGraph
+  - hash:
+      serializedVersion: 2
+      Hash: ec59ee90e519a7aebbd41426b3614a70
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GamePlayUI
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -427,12 +610,6 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -449,6 +626,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: e95b5849b54502016fabc01a9ec4ad29
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamText
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -505,6 +688,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioMonitor
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -517,10 +706,40 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Ram
+    className: G_RamMonitor
+  - hash:
+      serializedVersion: 2
+      Hash: f2503778758bbd5f67876697aacf87cb
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioGraph
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: ff9f6dc0f9591445d4193bbb7396df28
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioText
+  - hash:
+      serializedVersion: 2
+      Hash: 9b070fd11003a7ac517c876788f0fb2a
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugsOnScrollListener
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1afab26586f4310783842d18c28473
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogManager
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -571,10 +790,22 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: d6aa81aaf0573bc1d6dbddf3023c6dc9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuUI
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: c4291324b051f8a955ba47077a7a2451
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy
+    className: GraphyDebugger
   - hash:
       serializedVersion: 2
       Hash: da4cc51a02ce84afe2cecd27cfe6997a
@@ -607,6 +838,12 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 4fc71a9e813ee2f6e622e9b2e6a926ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameSettings
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -619,7 +856,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 39812a95e28916e8c4f8a45139ca1913
+      Hash: c69dd00a13a6b369121fc75a54a6595b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScreenScript
@@ -643,10 +880,34 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: ca47b9266be6fe740b2cc81e82e5e114
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy
+    className: GraphyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 698ee8e8df65f02b2ae534f8cb52a856
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogItem
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 150d2705ec079b79d52ccce665aab8e1
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogPopup
+  - hash:
+      serializedVersion: 2
+      Hash: 407cd073e918be72093f98306fb47a6f
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Advanced
+    className: G_AdvancedData
   - hash:
       serializedVersion: 2
       Hash: 08ee8657518234f5355e31388cc13a80
@@ -659,6 +920,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: PathCreation.Examples
     className: PathFollower
+  - hash:
+      serializedVersion: 2
+      Hash: 45763c5633962fe4e7ad13b675515e66
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogResizeListener
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -683,6 +950,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: e033d3a34c6465c4e895d4cb3bae2a1b
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: VibrationExample
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -727,10 +1000,22 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 07b10ec6743430d549314b87e8e67f9d
+    assemblyName: Tayx.Graphy.dll
+    namespaceName: Tayx.Graphy.Audio
+    className: G_AudioManager
+  - hash:
+      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 608722e9939bb48b72e35920b911d194
+    assemblyName: IngameDebugConsole.Runtime.dll
+    namespaceName: IngameDebugConsole
+    className: DebugLogRecycledListView
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -743,6 +1028,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreSystem
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -779,133 +1070,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SwipeInput
-  - hash:
-      serializedVersion: 2
-      Hash: ca47b9266be6fe740b2cc81e82e5e114
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy
-    className: GraphyManager
-  - hash:
-      serializedVersion: 2
-      Hash: f2503778758bbd5f67876697aacf87cb
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Audio
-    className: G_AudioGraph
-  - hash:
-      serializedVersion: 2
-      Hash: ff9f6dc0f9591445d4193bbb7396df28
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Audio
-    className: G_AudioText
-  - hash:
-      serializedVersion: 2
-      Hash: 059e947208fbd17dc6d5d52ada6a4827
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Ram
-    className: G_RamManager
-  - hash:
-      serializedVersion: 2
-      Hash: 07b10ec6743430d549314b87e8e67f9d
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Audio
-    className: G_AudioManager
-  - hash:
-      serializedVersion: 2
-      Hash: c4291324b051f8a955ba47077a7a2451
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy
-    className: GraphyDebugger
-  - hash:
-      serializedVersion: 2
-      Hash: 407cd073e918be72093f98306fb47a6f
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Advanced
-    className: G_AdvancedData
-  - hash:
-      serializedVersion: 2
-      Hash: e1ee2d6edc5c544555d337d300c56ac6
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Fps
-    className: G_FpsManager
-  - hash:
-      serializedVersion: 2
-      Hash: e95b5849b54502016fabc01a9ec4ad29
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Ram
-    className: G_RamText
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Audio
-    className: G_AudioMonitor
-  - hash:
-      serializedVersion: 2
-      Hash: 994285ef78f1b8664eba320929ff05d0
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Ram
-    className: G_RamGraph
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Fps
-    className: G_FpsMonitor
-  - hash:
-      serializedVersion: 2
-      Hash: 1f7917ac8bd6b5986f92e8d7ff9c5880
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Fps
-    className: G_FpsText
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Ram
-    className: G_RamMonitor
-  - hash:
-      serializedVersion: 2
-      Hash: 7bdf56a97cc079197905c82e751ab3db
-    assemblyName: Tayx.Graphy.dll
-    namespaceName: Tayx.Graphy.Fps
-    className: G_FpsGraph
-  - hash:
-      serializedVersion: 2
-      Hash: 45763c5633962fe4e7ad13b675515e66
-    assemblyName: IngameDebugConsole.Runtime.dll
-    namespaceName: IngameDebugConsole
-    className: DebugLogResizeListener
-  - hash:
-      serializedVersion: 2
-      Hash: 608722e9939bb48b72e35920b911d194
-    assemblyName: IngameDebugConsole.Runtime.dll
-    namespaceName: IngameDebugConsole
-    className: DebugLogRecycledListView
-  - hash:
-      serializedVersion: 2
-      Hash: 150d2705ec079b79d52ccce665aab8e1
-    assemblyName: IngameDebugConsole.Runtime.dll
-    namespaceName: IngameDebugConsole
-    className: DebugLogPopup
-  - hash:
-      serializedVersion: 2
-      Hash: 9b070fd11003a7ac517c876788f0fb2a
-    assemblyName: IngameDebugConsole.Runtime.dll
-    namespaceName: IngameDebugConsole
-    className: DebugsOnScrollListener
-  - hash:
-      serializedVersion: 2
-      Hash: 698ee8e8df65f02b2ae534f8cb52a856
-    assemblyName: IngameDebugConsole.Runtime.dll
-    namespaceName: IngameDebugConsole
-    className: DebugLogItem
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1afab26586f4310783842d18c28473
-    assemblyName: IngameDebugConsole.Runtime.dll
-    namespaceName: IngameDebugConsole
-    className: DebugLogManager
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Main.unity
   - Assets/Scenes/GamePlay.unity
   playerPath: D:/3d_dev/Unity/CakeGame/Cakes/Build/buildAndroid.apk

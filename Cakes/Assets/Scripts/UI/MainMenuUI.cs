@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class MainMenuUI : MonoBehaviour
 {
@@ -46,6 +47,19 @@ public class MainMenuUI : MonoBehaviour
         {
             _settingsMenu.SetActive(false);
         }
+    }
+
+    public void OpenURL(string URL)
+    {
+        try
+        {
+            Application.OpenURL(URL);
+        }
+        catch(Exception e)
+        {
+            Debug.LogError(e.Message);
+        }
+        
     }
 
 }
