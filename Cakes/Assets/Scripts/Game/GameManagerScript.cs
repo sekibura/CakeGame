@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using PathCreation;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -78,7 +79,6 @@ public class GameManagerScript : MonoBehaviour
         InitPipeQueue();
         _isReadyForUpdate = true;
     }
-
     private void InitCakesResources()
     {
         #region load json
@@ -137,7 +137,6 @@ public class GameManagerScript : MonoBehaviour
         }
         Debug.Log("Cakes count = " + _cakes.Count);
     }
-
     private void InitCakes()
     {
         var pools = ObjectPool.SharedInstance.GetPools();
@@ -249,7 +248,6 @@ public class GameManagerScript : MonoBehaviour
         UpdateScreen();
         Debug.Log(_pipeQueue.Count + " after: " + PrintList(_pipeQueue));
     }
-
     private void NewNewOrder()
     {
         //update values!!!!!
@@ -294,11 +292,14 @@ public class GameManagerScript : MonoBehaviour
     public void GameOver()
     {
         Debug.LogWarning("GameOver!");
+        _gamePlayUI.GameOver();
+        SetPause(true);
+        
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
-    }
 
+    }
     public void AddToBox(Sides side, int ID, int price)
     {
         UpdateSpeedAndTime();
@@ -338,9 +339,6 @@ public class GameManagerScript : MonoBehaviour
         }
         UpdateScreen();
     }
-
-    
-   
     //очки за законченный заказ
     private void AddFinishedOrder(int money)
     {
@@ -359,7 +357,6 @@ public class GameManagerScript : MonoBehaviour
             //update screen score
         }
     }
-
     private void SetSpeedCakes(float value)
     {
         foreach (var item in spawnedFollower)
@@ -367,7 +364,6 @@ public class GameManagerScript : MonoBehaviour
             item.SetSpeed(value);
         }
     }
-
     private void RandomWithoutDublicate(List<int> order, (int,int) range, int count, bool withoutDublicate)
     {
         
@@ -397,7 +393,6 @@ public class GameManagerScript : MonoBehaviour
                 possible.RemoveAt(index);
         }
     }
-
     public Sides GetOrder(int ID)
     {
         if (_leftOrders.Peek().Contains(ID))
@@ -406,7 +401,6 @@ public class GameManagerScript : MonoBehaviour
             return Sides.Right;
         else return Sides.NoSide;
     }
-
     private string PrintList(List<int> l)
     {
         string s = "";
@@ -416,7 +410,6 @@ public class GameManagerScript : MonoBehaviour
         }
         return s;
     }
-
     private void UpdateScreen()
     {
         List<Sprite> sprites = new List<Sprite>();
@@ -434,7 +427,6 @@ public class GameManagerScript : MonoBehaviour
         }
             
     }
-
     private void InitImagesList(List<Sprite> sprites, List<int> ordersID)
     {
         sprites.Clear();
@@ -443,7 +435,6 @@ public class GameManagerScript : MonoBehaviour
             sprites.Add(_cakes[item].GetComponent<Cake>().GetSprite());
         }
     }
-
     public void SetPause(bool value)
     {
         if (value)
@@ -458,6 +449,21 @@ public class GameManagerScript : MonoBehaviour
             //SetSpeedCakes(_currentSpeedMoving);
             //_isReadyForUpdate = true;
         }
+    }
+    public void RestartGame()
+    {
+        _gamePlayUI.ToDark();
+        StartCoroutine("ReloadScene", 0.35);
+    }
+    public void Continue()
+    {
+
+    }
+
+    IEnumerator ReloadScene(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("GamePlay");
     }
 }
 

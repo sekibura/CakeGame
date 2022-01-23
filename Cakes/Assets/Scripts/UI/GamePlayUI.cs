@@ -11,6 +11,8 @@ public class GamePlayUI : MonoBehaviour
     private GameManagerScript _gameManager;
     [SerializeField]
     private GameSettings _gameSettings;
+    [SerializeField]
+    private GameObject _gameOverMenu;
 
     [SerializeField]
     private TMP_Text _score;
@@ -18,6 +20,8 @@ public class GamePlayUI : MonoBehaviour
     private TMP_Text _Maxscore;
     [SerializeField]
     private TMP_Text _money;
+    [SerializeField]
+    private GameObject _toDark;
 
 
     private void Start()
@@ -38,12 +42,9 @@ public class GamePlayUI : MonoBehaviour
             _gameManager.SetPause(false);
             _pauseMenu.SetActive(false);
         }
-            
-
-        
     }
 
-    public void HomeScene()
+    public void BtnHomeScene()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main");
@@ -56,4 +57,13 @@ public class GamePlayUI : MonoBehaviour
         _money.text = ScoreSystem.Instance.GetMoney().ToString();
     }
 
+    public void GameOver()
+    {
+        _gameOverMenu.SetActive(true);
+    }
+
+    public void ToDark()
+    {
+        _toDark.SetActive(true);
+    }
 }
