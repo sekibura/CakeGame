@@ -17,10 +17,14 @@ public class MainMenuUI : MonoBehaviour
 
     [SerializeField]
     private TMP_Text _scoreField;
+    [SerializeField]
+    private TMP_Text _moneyField;
 
     private void Start()
     {
         _scoreField.text = ScoreSystem.Instance.GetMaxScore().ToString();
+        _moneyField.text = ScoreSystem.Instance.GetMoney().ToString();
+
     }
     public void StartButton()
     {

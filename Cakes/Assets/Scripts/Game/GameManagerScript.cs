@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using PathCreation;
+using System;
 
 public class GameManagerScript : MonoBehaviour
 {
-    [SerializeField]
-    private  GameObject[] _cakes;
+//    [SerializeField]
+    private  List<GameObject> _cakes = new List<GameObject>();
     //private List<ObjectPoolNonSingleton> _pools = new List<ObjectPoolNonSingleton>();
     private readonly int _amoutToPool = 5;
 
@@ -53,26 +54,95 @@ public class GameManagerScript : MonoBehaviour
     private List<int> spawned = new List<int>();
     private List<Follower> spawnedFollower = new List<Follower>();
 
+    #region score and money
     //очки за каждый правильный заказ
     private int _currentScore = 0;
+    private int _leftMoney = 0;
+    private int _rightMoney = 0;
+    [SerializeField]
+    private GamePlayUI _gamePlayUI;
+    #endregion
+
 
 
     private void Start()
     {
-        _currentSpeedMoving = _startSpeedMoving;
+        ScoreSystem.CurrentScore = 0;
+       _currentSpeedMoving = _startSpeedMoving;
         _timeBetweenSpawn = _deltaS / _currentSpeedMoving;
 
+        _gamePlayUI.UpdateScoreAndMoney();
+        InitCakesResources();
         InitPools();
         InitCakes();
         InitPipeQueue();
         _isReadyForUpdate = true;
-        
     }
+
+    private void InitCakesResources()
+    {
+        #region load json
+        string jsonStr = SaveManager.Instance.Load<string>("ShopItems");
+        ShopItemsProxy shopItemsProxy = new ShopItemsProxy();
+        Debug.LogWarning("Game manager json = " + jsonStr);
+        if (!string.IsNullOrEmpty(jsonStr))
+            shopItemsProxy = JsonUtility.FromJson<ShopItemsProxy>(jsonStr);
+        else
+            Debug.LogWarning("Json empty!");
+        #endregion
+
+
+        #region load gameobjects from resources
+        List<GameObject> cakesResources = new List<GameObject>();
+
+        try
+        {
+            cakesResources = Resources.LoadAll("Cakes", typeof(GameObject)).Cast<GameObject>().ToList();
+            if (cakesResources.Count == 0)
+                Debug.LogWarning("No cakes resources");
+
+            foreach (var go in cakesResources)
+            {
+                Debug.Log(go.name);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Proper Method failed with the following exception: ");
+            Debug.Log(e);
+        }
+        #endregion
+        
+
+        foreach (var cake in cakesResources)
+        {
+            var result = shopItemsProxy.ShopItems.Find(x => x.Name == cake.name);
+            if (result != null)
+            {
+                if(result.AlreadyPurchased)
+                    _cakes.Add(cake);
+                else if (cake.GetComponent<Cake>().GetPrice() == 0)
+                {
+                    _cakes.Add(cake);
+                }
+            }
+            else
+            {
+                if (cake.GetComponent<Cake>().GetPrice() == 0)
+                {
+                    _cakes.Add(cake);
+                }
+            }
+            
+        }
+        Debug.Log("Cakes count = " + _cakes.Count);
+    }
+
     private void InitCakes()
     {
         var pools = ObjectPool.SharedInstance.GetPools();
 
-        for (int i = 0; i < _cakes.Length; i++)
+        for (int i = 0; i < _cakes.Count; i++)
         {
             foreach (var item in pools[i])
             {
@@ -88,7 +158,7 @@ public class GameManagerScript : MonoBehaviour
     }
     private void InitPools()
     {
-        ObjectPool.SharedInstance.InitPools(_cakes, _amoutToPool);
+        ObjectPool.SharedInstance.InitPools(_cakes.ToArray(), _amoutToPool);
     }
     private void InitPipeQueue()
     {
@@ -103,7 +173,7 @@ public class GameManagerScript : MonoBehaviour
     private List<int> CreateOrder(int maxLengthOrder)
     {
         List<int> order = new List<int>();
-        RandomWithoutDublicate(order, (0, _cakes.Length), maxLengthOrder);
+        RandomWithoutDublicate(order, (0, _cakes.Count), maxLengthOrder, false);
         return order;
     }
     private void InstantinateCakes()
@@ -125,7 +195,7 @@ public class GameManagerScript : MonoBehaviour
             int index = 0;
          
            
-            int a = Random.Range(0, summ.Count);
+            int a = UnityEngine.Random.Range(0, summ.Count);
             Debug.Log("length = " + summ.Count + " || " + a);
             int value = summ[a];
             int indexinList = _pipeQueue.IndexOf(value);
@@ -229,7 +299,7 @@ public class GameManagerScript : MonoBehaviour
 #endif
     }
 
-    public void AddToBox(Sides side, int ID)
+    public void AddToBox(Sides side, int ID, int price)
     {
         UpdateSpeedAndTime();
         spawned.Remove(ID);
@@ -240,10 +310,12 @@ public class GameManagerScript : MonoBehaviour
                 GameOver();
 
             _leftOrders.Peek().Remove(ID);
+            _leftMoney += price;
             if (_leftOrders.Peek().Count == 0)
             {
                 Debug.Log("order finished! ");
-                AddFinishedOrder();
+                AddFinishedOrder(_leftMoney);
+                _leftMoney = 0;
                 _leftOrders.Dequeue();
                 NewOrder(Sides.Left);
             }
@@ -254,10 +326,12 @@ public class GameManagerScript : MonoBehaviour
                 GameOver();
 
             _rightOrders.Peek().Remove(ID);
+            _rightMoney += price;
             if (_rightOrders.Peek().Count == 0)
             {
                 Debug.Log("order finished! ");
-                AddFinishedOrder();
+                AddFinishedOrder(_rightMoney);
+                _rightMoney = 0;
                 _rightOrders.Dequeue();
                 NewOrder(Sides.Right);
             }
@@ -268,13 +342,16 @@ public class GameManagerScript : MonoBehaviour
     
    
     //очки за законченный заказ
-    private void AddFinishedOrder()
+    private void AddFinishedOrder(int money)
     {
-        _currentScore++;
-        if (ScoreSystem.Instance.SetMaxScore(_currentScore))
+        //_currentScore++;
+        ScoreSystem.CurrentScore++;
+        ScoreSystem.Instance.AddMoney(money);
+        _gamePlayUI.UpdateScoreAndMoney();
+        if (ScoreSystem.Instance.SetMaxScore(ScoreSystem.CurrentScore))
         {
             //play anim new max score
-            
+
             //update screen score
         }
         else
@@ -291,7 +368,7 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    private void RandomWithoutDublicate(List<int> order, (int,int) range, int count)
+    private void RandomWithoutDublicate(List<int> order, (int,int) range, int count, bool withoutDublicate)
     {
         
         List<int> possible = Enumerable.Range(range.Item1, range.Item2).ToList();
@@ -311,12 +388,13 @@ public class GameManagerScript : MonoBehaviour
         //        possible.Remove(item);
         //    }
         //}
-
+        
         for (int i = 0; i < count; i++)
         {
-            int index = Random.Range(0, possible.Count);
+            int index = UnityEngine.Random.Range(0, possible.Count);
             order.Add(possible[index]);
-            possible.RemoveAt(index);
+            if(withoutDublicate)
+                possible.RemoveAt(index);
         }
     }
 
@@ -356,6 +434,7 @@ public class GameManagerScript : MonoBehaviour
         }
             
     }
+
     private void InitImagesList(List<Sprite> sprites, List<int> ordersID)
     {
         sprites.Clear();
@@ -391,7 +470,7 @@ public static class ListExtension
         while (n > 1)
         {
             n--;
-            int k = Random.Range(0, n + 1);
+            int k = UnityEngine.Random.Range(0, n + 1);
             T value = list[k];
             list[k] = list[n];
             list[n] = value;

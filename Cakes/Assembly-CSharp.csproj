@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.25f1</UnityVersion>
@@ -57,12 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
+    <Compile Include="Assets\Scripts\UI\AttributionsScript.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopCard.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
+    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopItem.cs" />
     <Compile Include="Assets\Scripts\Game\Cake.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Systems\SaveManager.cs" />
     <Compile Include="Assets\Scripts\UI\GamePlayUI.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopSystem.cs" />
     <Compile Include="Assets\Scripts\Test\try1.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopItemsProxy.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectPoolNonSingleton.cs" />
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACircle.cs" />
     <Compile Include="Assets\Scripts\Game\CakeSO.cs" />
@@ -74,6 +81,7 @@
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\Scripts\UI\Toggles\SwitchToggle.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopView.cs" />
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnAExp.cs" />
     <Compile Include="Assets\Scripts\Settings\ScoreSystem.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />

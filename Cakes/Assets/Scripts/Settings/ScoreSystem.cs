@@ -5,6 +5,7 @@ using UnityEngine;
 public  class ScoreSystem: MonoBehaviour
 {
     public static ScoreSystem Instance = null;
+    public static int CurrentScore=0;
 
     private void Start()
     {
@@ -19,24 +20,27 @@ public  class ScoreSystem: MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+#if DEBUG
+        //SetMoney(9999999);
+#endif
+
     }
 
     public int GetMoney()
     {
-        return PlayerPrefs.GetInt("Money");
+        return SaveManager.Instance.Load<int>("Money");
     }
     public int GetMaxScore()
     {
-        return PlayerPrefs.GetInt("MaxScore");
+        return SaveManager.Instance.Load<int>("MaxScore");
     }
 
     public bool MinusMoney(int value)
     {
-        var money = PlayerPrefs.GetInt("Money"); ;
+        var money = SaveManager.Instance.Load<int>("Money");
         if (money >= value)
         {
-            PlayerPrefs.SetInt("Money",money-value);
-            PlayerPrefs.Save();
+            SaveManager.Instance.Save<int>("Money", money - value);
             return true;
         }
         else
@@ -47,24 +51,34 @@ public  class ScoreSystem: MonoBehaviour
 
     public void AddMoney(int value)
     {
-        var money = PlayerPrefs.GetInt("Money"); ;
-        PlayerPrefs.SetInt("Money", money + value);
-        PlayerPrefs.Save();
+        var money = SaveManager.Instance.Load<int>("Money");
+        SaveManager.Instance.Save<int>("Money", money + value);
     }
 
     public bool SetMaxScore(int value)
     {
-        var score = PlayerPrefs.GetInt("MaxScore");
+        var score = SaveManager.Instance.Load<int>("MaxScore");
         if (score < value)
         {
-            PlayerPrefs.SetInt("MaxScore", value);
-            PlayerPrefs.Save();
+            SaveManager.Instance.Save<int>("MaxScore", value);
             return true;
         }
         else
         {
             return false;
         }
+    }
+
+    private void SetMoney(int value)
+    {
+        SaveManager.Instance.Save<int>("Money", value);
+    }
+
+    public void Reset()
+    {
+        SaveManager.Instance.Save<int>("Money", 0);
+        SaveManager.Instance.Save<int>("MaxScore", 0);
+        CurrentScore = 0;
     }
 
 }

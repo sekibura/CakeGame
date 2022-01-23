@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GamePlayUI : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class GamePlayUI : MonoBehaviour
     private GameManagerScript _gameManager;
     [SerializeField]
     private GameSettings _gameSettings;
+
+    [SerializeField]
+    private TMP_Text _score;
+    [SerializeField]
+    private TMP_Text _Maxscore;
+    [SerializeField]
+    private TMP_Text _money;
+
 
     private void Start()
     {
@@ -38,6 +47,13 @@ public class GamePlayUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main");
+    }
+
+    public void UpdateScoreAndMoney()
+    {
+        _score.text = ScoreSystem.CurrentScore.ToString();
+        _Maxscore.text = ScoreSystem.Instance.GetMaxScore().ToString();
+        _money.text = ScoreSystem.Instance.GetMoney().ToString();
     }
 
 }

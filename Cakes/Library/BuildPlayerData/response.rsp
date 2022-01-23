@@ -19,6 +19,8 @@
 -s="D:\3d_dev\Unity\CakeGame\Cakes\Assets\Plugins\Demigiant\DOTween"
 -s="D:\3d_dev\Unity\CakeGame\Cakes\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime"
 -s="D:\3d_dev\Unity\CakeGame\Cakes\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom"
+-s="D:\3d_dev\Unity\CakeGame\Cakes\Assets\JsonDotNet\Assemblies\Standalone"
+-s="D:\3d_dev\Unity\CakeGame\Cakes\Assets\JsonDotNet\Assemblies\Windows"
 -s="D:\Soft\UnityEditors\2020.3.25f1\Editor\Data\Managed\UnityEngine"
 -s="D:\Soft\UnityEditors\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0"
 -s="D:\Soft\UnityEditors\2020.3.25f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard"

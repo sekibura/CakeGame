@@ -539,6 +539,10 @@ MonoBehaviour:
   LeftPosition: {x: 1.951956, y: 0.19601512, z: -1.5486577}
   RightPosition: {x: 1.951956, y: 0.19601512, z: 1.5913423}
   _chooseSound: {fileID: 8996585921320750046}
+  _price: 0
+  _shopName: 
+  _description: 
+  _profit: 0
 --- !u!65 &-5829638967534591372
 BoxCollider:
   m_ObjectHideFlags: 0

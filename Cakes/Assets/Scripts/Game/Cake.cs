@@ -35,6 +35,17 @@ public class Cake : MonoBehaviour
     [SerializeField]
     private AudioSource _chooseSound;
 
+    #region Shop Values
+    [SerializeField]
+    private int _price;
+    [SerializeField]
+    private string _shopName;
+    [SerializeField]
+    private string _description;
+    [SerializeField]
+    private int _profit;
+    #endregion
+
     private void Start()
     {
         InitMeshRenderers();
@@ -144,7 +155,7 @@ public class Cake : MonoBehaviour
         {
             _follower.enabled = false;
             _isMoving = true;
-            GameManager.AddToBox(side, ID);
+            GameManager.AddToBox(side, ID, GetProfit());
         }
 
     }
@@ -187,5 +198,25 @@ public class Cake : MonoBehaviour
     {
         return _cakeIcon;
     }
+
+    public int GetPrice()
+    {
+        return _price;
+    }
+    public int GetProfit()
+    {
+        return _profit;
+    }
+
+    public string GetShopName()
+    {
+        return _shopName;
+    }
+
+    public string GetDescription()
+    {
+        return _description;
+    }
+
 }
 

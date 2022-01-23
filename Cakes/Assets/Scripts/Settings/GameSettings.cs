@@ -20,15 +20,22 @@ public class GameSettings : MonoBehaviour
         _mixer.audioMixer.SetFloat("MasterVolume", 0);
         else
             _mixer.audioMixer.SetFloat("MasterVolume", -80);
+        SaveManager.Instance.Save<float>("MasterVolume", enable? 0:-80);
+    }
+
+    private void Start()
+    {
+        float volume = SaveManager.Instance.Load<float>("MasterVolume");
+        _mixer.audioMixer.SetFloat("MasterVolume", volume);
     }
 
     
-
     public void Init()
     {
         //init volume
-        float volume = 0;
-        _mixer.audioMixer.GetFloat("MasterVolume", out volume);
+        float volume = SaveManager.Instance.Load<float>("MasterVolume");
+        SetVolume(volume);
+        //_mixer.audioMixer.GetFloat("MasterVolume", out volume);
         if (volume == 0)
             _audioToggle.isOn = true;
         else if (volume == -80)
@@ -40,6 +47,7 @@ public class GameSettings : MonoBehaviour
     public void SetVolume(float value)
     {
         _mixer.audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0, value));
+        SaveManager.Instance.Save<float>("MasterVolume", value);
     }
 
     public void ToggleVibration(bool value)
