@@ -28,7 +28,8 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     private Transform _rightBoxPosition;
 
-
+    
+    public bool _autoPlay = false;
 
     private float _deltaS = 5f;
     #region timeDelay
@@ -296,7 +297,7 @@ public class GameManagerScript : MonoBehaviour
         SetPause(true);
         
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
 #endif
 
     }
@@ -452,18 +453,22 @@ public class GameManagerScript : MonoBehaviour
     }
     public void RestartGame()
     {
+        Time.timeScale = 1f;
+        Debug.Log("restart");
         _gamePlayUI.ToDark();
-        StartCoroutine("ReloadScene", 0.35);
+        StartCoroutine(ReloadScene(1,"GamePlay"));
     }
-    public void Continue()
+    public void GoHome()
     {
-
+        Time.timeScale = 1f;
+        Debug.Log("home");
+        _gamePlayUI.ToDark();
+        StartCoroutine(ReloadScene(1,"Main"));
     }
-
-    IEnumerator ReloadScene(float time)
+    IEnumerator ReloadScene( float time, string scene)
     {
-        yield return new WaitForSeconds(time);
-        SceneManager.LoadScene("GamePlay");
+        yield return new WaitForSecondsRealtime(time);
+        SceneManager.LoadScene(scene);
     }
 }
 

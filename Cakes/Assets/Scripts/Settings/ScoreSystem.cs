@@ -53,6 +53,7 @@ public  class ScoreSystem: MonoBehaviour
     {
         var money = SaveManager.Instance.Load<int>("Money");
         SaveManager.Instance.Save<int>("Money", money + value);
+        Debug.Log("Money: " + money + "+"+value+"="+ SaveManager.Instance.Load<int>("Money").ToString());
     }
 
     public bool SetMaxScore(int value)

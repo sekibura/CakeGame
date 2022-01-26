@@ -46,6 +46,8 @@ public class Cake : MonoBehaviour
     private int _profit;
     #endregion
 
+   
+
     private void Start()
     {
         InitMeshRenderers();
@@ -137,19 +139,26 @@ public class Cake : MonoBehaviour
 
         _color = Color.green;
         Sides side = Sides.NoSide;
-        if (SwipeInput.swipedLeft || GameManager.GetOrder(ID) == Sides.Left)
+        Sides sideFromOrfer = Sides.NoSide;
+#if UNITY_EDITOR
+        if(GameManager._autoPlay)
+            sideFromOrfer = GameManager.GetOrder(ID);
+#endif
+        if (SwipeInput.swipedLeft || sideFromOrfer == Sides.Left)
         {
             Debug.Log("SwipeLeft");
             side = Sides.Left;
             _currentTargetToMove = LeftPosition;
+            _chooseSound.Play();
         }
-        else if(SwipeInput.swipedRight || GameManager.GetOrder(ID) == Sides.Right)
+        else if(SwipeInput.swipedRight || sideFromOrfer == Sides.Right)
         {
             Debug.Log("SwipeRight");
             side = Sides.Right;
             _currentTargetToMove = RightPosition;
+            _chooseSound.Play();
         }
-        _chooseSound.Play();
+        
 
         if (side != Sides.NoSide)
         {

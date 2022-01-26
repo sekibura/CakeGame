@@ -34,7 +34,7 @@ public class GameSettings : MonoBehaviour
     {
         //init volume
         float volume = SaveManager.Instance.Load<float>("MasterVolume");
-        SetVolume(volume);
+        _mixer.audioMixer.SetFloat("MasterVolume", volume);
         //_mixer.audioMixer.GetFloat("MasterVolume", out volume);
         if (volume == 0)
             _audioToggle.isOn = true;
@@ -44,10 +44,30 @@ public class GameSettings : MonoBehaviour
         //init vibro
     }
 
-    public void SetVolume(float value)
+    public void SetVolumeLerp(float value)
     {
         _mixer.audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0, value));
         SaveManager.Instance.Save<float>("MasterVolume", value);
+    }
+
+    public void SetVolume(float value)
+    {
+        _mixer.audioMixer.SetFloat("MasterVolume",  value);
+        SaveManager.Instance.Save<float>("MasterVolume", value);
+
+    }
+    public void LoadVolume()
+    {
+        float volume = SaveManager.Instance.Load<float>("MasterVolume");
+        Debug.Log("Loaded volume: "+volume);
+        SetVolume(volume);
+    }
+
+    public float GetVolume()
+    {
+        float volume;
+        _mixer.audioMixer.GetFloat("MasterVolume", out volume);
+        return volume;
     }
 
     public void ToggleVibration(bool value)

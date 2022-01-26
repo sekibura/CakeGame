@@ -46,8 +46,7 @@ public class GamePlayUI : MonoBehaviour
 
     public void BtnHomeScene()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Main");
+        _gameManager.GoHome();
     }
 
     public void UpdateScoreAndMoney()
@@ -64,6 +63,7 @@ public class GamePlayUI : MonoBehaviour
 
     public void ToDark()
     {
+        Debug.Log("toDark");
         _toDark.SetActive(true);
     }
 }
