@@ -24,13 +24,13 @@ public class BannerAd : MonoBehaviour
 
     private void Start()
     {
-        if (_isOn && !Advertisement.Banner.isLoaded )
-        {
+        //if (_isOn && !Advertisement.Banner.isLoaded )
+        //{
             // Set the banner position:
             Advertisement.Banner.SetPosition(_bannerPosition);
             //LoadBanner();
             StartCoroutine("LoadAdBanner");
-        }
+        //}
         
     }
 

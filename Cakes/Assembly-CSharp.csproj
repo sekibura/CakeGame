@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Shop\ShopCard.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
+    <Compile Include="Assets\Scripts\Systems\InputSys.cs" />
     <Compile Include="Assets\Scripts\Shop\ShopItem.cs" />
     <Compile Include="Assets\Scripts\Game\Cake.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACurve.cs" />
     <Compile Include="Assets\Scripts\Test\Follower.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\Game\ChooseZone.cs" />
     <Compile Include="Assets\Scripts\Ads\AdsLoader.cs" />
     <Compile Include="Assets\Scripts\Settings\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Game\ScreenScript.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="Assets\Scripts\Shop\ShopView.cs" />
     <Compile Include="Assets\Scripts\Ads\RewardedAds.cs" />
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnAExp.cs" />
+    <Compile Include="Assets\Scripts\Ads\BannerExp.cs" />
     <Compile Include="Assets\Scripts\Ads\BannerAd.cs" />
     <Compile Include="Assets\Scripts\Settings\ScoreSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\MainThreadExecuter.cs" />
@@ -94,7 +97,6 @@
     <Compile Include="Assets\Scripts\Ads\InterstitialAd.cs" />
     <Compile Include="Assets\Scripts\Game\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\Input\SwipeInput.cs" />
-    <Compile Include="Assets\Scripts\Ads\BannerExp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -105,8 +107,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Sprites\UI\Lace\Новый текстовый документ.TXT" />
+    <None Include="Assets\TSF\Shaders\TSF.shader" />
     <None Include="Assets\Fonts\Yellowtail\LICENSE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
     <None Include="Assets\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
     <None Include="Assets\Sprites\UI\Lace\vintage-lace-borders-pack\Fonts.txt" />
@@ -126,7 +130,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\FlexibleCelShader\Shaders\CelNoOutline.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\FlexibleCelShader\Shaders\CelSilhouette.shader" />
+    <None Include="Assets\FlexibleCelShader\Shaders\CelOutline.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>

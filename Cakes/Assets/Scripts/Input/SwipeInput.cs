@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * Swipe Input script for Unity by @fonserbc, free to use wherever
@@ -27,10 +28,14 @@ public class SwipeInput : MonoBehaviour
 
 	public bool debugWithArrowKeys = true;
 
+
+
 	Vector2 startPos;
 	float startTime;
 
-	public void Update()
+
+
+    public void Update()
 	{
 		swipedRight = false;
 		swipedLeft = false;
@@ -89,5 +94,9 @@ public class SwipeInput : MonoBehaviour
 			swipedRight = swipedRight || Input.GetKeyDown(KeyCode.RightArrow);
 			swipedLeft = swipedLeft || Input.GetKeyDown(KeyCode.LeftArrow);
 		}
+
+
 	}
+
+
 }

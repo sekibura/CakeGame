@@ -65,7 +65,10 @@ public class GameManagerScript : MonoBehaviour
     private GamePlayUI _gamePlayUI;
     #endregion
 
-
+    [SerializeField]
+    private GameObject _leftOrderBox;
+    [SerializeField]
+    private GameObject _rightOrderBox;
 
     private void Start()
     {
@@ -315,6 +318,7 @@ public class GameManagerScript : MonoBehaviour
             _leftMoney += price;
             if (_leftOrders.Peek().Count == 0)
             {
+                FinishOrderAnimation(Sides.Left);
                 Debug.Log("order finished! ");
                 AddFinishedOrder(_leftMoney);
                 _leftMoney = 0;
@@ -331,6 +335,7 @@ public class GameManagerScript : MonoBehaviour
             _rightMoney += price;
             if (_rightOrders.Peek().Count == 0)
             {
+                FinishOrderAnimation(Sides.Right);
                 Debug.Log("order finished! ");
                 AddFinishedOrder(_rightMoney);
                 _rightMoney = 0;
@@ -340,6 +345,20 @@ public class GameManagerScript : MonoBehaviour
         }
         UpdateScreen();
     }
+
+
+    private void FinishOrderAnimation(Sides sides)
+    {
+        if (sides == Sides.Left)
+        {
+            _leftOrderBox.GetComponent<Animator>().Play("FinishOrder");
+        }
+        else if (sides == Sides.Right)
+        {
+            _rightOrderBox.GetComponent<Animator>().Play("FinishOrder");
+        }
+    }
+
     //очки за законченный заказ
     private void AddFinishedOrder(int money)
     {
@@ -416,13 +435,13 @@ public class GameManagerScript : MonoBehaviour
         List<Sprite> sprites = new List<Sprite>();
         if (_leftOrders.Count > 0)
         {
-            _screenLeft.Set(_leftOrders.Peek());
+            //_screenLeft.Set(_leftOrders.Peek());
             InitImagesList(sprites, _leftOrders.Peek());
             _screenLeft.Set(sprites);
         }
         if (_rightOrders.Count > 0)
         {
-            _screenRight.Set(_rightOrders.Peek());
+            //_screenRight.Set(_rightOrders.Peek());
             InitImagesList(sprites, _rightOrders.Peek());
             _screenRight.Set(sprites);
         }
@@ -456,7 +475,7 @@ public class GameManagerScript : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("restart");
         _gamePlayUI.ToDark();
-        StartCoroutine(ReloadScene(1,"GamePlay"));
+        StartCoroutine(ReloadScene(1,"UpdatedGamePlay"));
     }
     public void GoHome()
     {

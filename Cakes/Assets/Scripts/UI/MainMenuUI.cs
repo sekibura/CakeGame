@@ -41,7 +41,7 @@ public class MainMenuUI : MonoBehaviour
     IEnumerator LoadAfterWait(float value)
     {
         yield return new WaitForSeconds(value);
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("UpdatedGamePlay");
 
     }
 

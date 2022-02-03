@@ -25,11 +25,11 @@ public class Cake : MonoBehaviour
     public Vector3 LeftPosition;
     public Vector3 RightPosition;
     private Vector3 _currentTargetToMove;
-    private bool _isMoving = false;
+    private bool _isMovingToOrderTable = false;
 
     private string _lastTag = null;
 
-    private float _speedMovingToBox = 5f;
+    private float _speedMovingToBox = 8f;
     private Color _color;
 
     [SerializeField]
@@ -61,13 +61,13 @@ public class Cake : MonoBehaviour
             _follower = gameObject.GetComponent<Follower>();
         _follower.enabled = true;
         _lastTag = null;
-        _isMoving = false;
+        _isMovingToOrderTable = false;
         SetMaterial(_defaultMaterial);
     }
 
     private void Update()
     {
-        if (_isMoving)
+        if (_isMovingToOrderTable)
         {
             float step = _speedMovingToBox * Time.deltaTime;
             _color = Color.yellow;
@@ -134,39 +134,73 @@ public class Cake : MonoBehaviour
 
     private void ChoozeZone()
     {
-        if (_isMoving)
+        if (_isMovingToOrderTable)
             return;
 
         _color = Color.green;
         Sides side = Sides.NoSide;
         Sides sideFromOrfer = Sides.NoSide;
-#if UNITY_EDITOR
-        if(GameManager._autoPlay)
+
+        if (GameManager._autoPlay)
+        {
             sideFromOrfer = GameManager.GetOrder(ID);
-#endif
-        if (SwipeInput.swipedLeft || sideFromOrfer == Sides.Left)
+
+            if (SwipeInput.swipedLeft || (sideFromOrfer == Sides.Left))
+            {
+                Debug.Log("SwipeLeft");
+                side = Sides.Left;
+                _currentTargetToMove = LeftPosition;
+                _chooseSound.Play();
+            }
+            else if (SwipeInput.swipedRight || (sideFromOrfer == Sides.Right))
+            {
+                Debug.Log("SwipeRight");
+                side = Sides.Right;
+                _currentTargetToMove = RightPosition;
+                _chooseSound.Play();
+            }
+
+
+            if (side != Sides.NoSide)
+            {
+                _follower.enabled = false;
+                _isMovingToOrderTable = true;
+                GameManager.AddToBox(side, ID, GetProfit());
+            }
+        }
+
+    }
+
+    public void MoveToOrderInZone(Sides side)
+    {
+
+        if (_isMovingToOrderTable)
+            return;
+
+        Debug.Log("Move to" + side);
+
+        if (side == Sides.Left)
         {
             Debug.Log("SwipeLeft");
             side = Sides.Left;
             _currentTargetToMove = LeftPosition;
             _chooseSound.Play();
         }
-        else if(SwipeInput.swipedRight || sideFromOrfer == Sides.Right)
+        else if (side == Sides.Right)
         {
             Debug.Log("SwipeRight");
             side = Sides.Right;
             _currentTargetToMove = RightPosition;
             _chooseSound.Play();
         }
-        
+
 
         if (side != Sides.NoSide)
         {
             _follower.enabled = false;
-            _isMoving = true;
+            _isMovingToOrderTable = true;
             GameManager.AddToBox(side, ID, GetProfit());
         }
-
     }
 
     private void SetMaterial(Material material)
