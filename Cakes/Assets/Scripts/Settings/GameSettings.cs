@@ -23,6 +23,12 @@ public class GameSettings : MonoBehaviour
         SaveManager.Instance.Save<float>("MasterVolume", enable? 0:-80);
     }
 
+
+    private void Awake()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
+
     private void Start()
     {
         float volume = SaveManager.Instance.Load<float>("MasterVolume");

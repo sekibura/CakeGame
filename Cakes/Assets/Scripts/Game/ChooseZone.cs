@@ -9,6 +9,18 @@ public class ChooseZone : MonoBehaviour
     [SerializeField]
     private Image _currentCakeIcon;
 
+    [SerializeField]
+    private MeshRenderer __borderIn;
+    [SerializeField]
+    private MeshRenderer __borderOut;
+    [SerializeField]
+    private Material _red;
+    [SerializeField]
+    private Material _green;
+    [SerializeField]
+    private bool _isBorderOn = false;
+
+
     private void Start()
     {
         _currentCakeIcon.enabled = false;
@@ -22,6 +34,12 @@ public class ChooseZone : MonoBehaviour
             _currentCake = cake;
             _currentCakeIcon.sprite = cake.GetSprite();
             _currentCakeIcon.enabled = true;
+            if (_isBorderOn)
+            {
+                __borderIn.material = _green;
+                __borderOut.material = _green;
+            }
+            
         }
     }
 
@@ -32,6 +50,12 @@ public class ChooseZone : MonoBehaviour
         {
             _currentCake = null;
             _currentCakeIcon.enabled = false;
+
+            if (_isBorderOn)
+            {
+                __borderIn.material = _red;
+                __borderOut.material = _red;
+            }
         }
     }
 
