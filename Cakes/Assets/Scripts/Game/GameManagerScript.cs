@@ -58,7 +58,7 @@ public class GameManagerScript : MonoBehaviour
 
     #region score and money
     //очки за каждый правильный заказ
-    private int _currentScore = 0;
+    //private int _currentScore = 0;
     private int _leftMoney = 0;
     private int _rightMoney = 0;
     [SerializeField]
@@ -73,7 +73,9 @@ public class GameManagerScript : MonoBehaviour
     private void Start()
     {
         ScoreSystem.CurrentScore = 0;
-       _currentSpeedMoving = _startSpeedMoving;
+        ScoreSystem.CurrentMoney = 0;
+
+        _currentSpeedMoving = _startSpeedMoving;
         _timeBetweenSpawn = _deltaS / _currentSpeedMoving;
 
         _gamePlayUI.UpdateScoreAndMoney();
@@ -296,7 +298,8 @@ public class GameManagerScript : MonoBehaviour
     public void GameOver()
     {
         Debug.LogWarning("GameOver!");
-        _gamePlayUI.GameOver();
+
+        _gamePlayUI.GameOver(ScoreSystem.CurrentScore, ScoreSystem.Instance.GetMaxScore(), ScoreSystem.CurrentMoney);
         SetPause(true);
         
 #if UNITY_EDITOR
@@ -364,6 +367,8 @@ public class GameManagerScript : MonoBehaviour
     {
         //_currentScore++;
         ScoreSystem.CurrentScore++;
+        ScoreSystem.CurrentMoney += money;
+
         ScoreSystem.Instance.AddMoney(money);
         _gamePlayUI.UpdateScoreAndMoney();
         if (ScoreSystem.Instance.SetMaxScore(ScoreSystem.CurrentScore))

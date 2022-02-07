@@ -1,0 +1,1157 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19042) 64bit Core' Language: 'ru' Physical Memory: 16165 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\Soft\UnityEditors\2020.3.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/3d_dev/Unity/CakeGame/Cakes
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58929
+Successfully changed project path to: D:/3d_dev/Unity/CakeGame/Cakes
+D:/3d_dev/Unity/CakeGame/Cakes
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 117.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.25f1 (9b9180224418)
+[Subsystems] Discovering subsystems at path D:/Soft/UnityEditors/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/3d_dev/Unity/CakeGame/Cakes/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   30.0.14.9729
+Initialize mono
+Mono path[0] = 'D:/Soft/UnityEditors/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Soft/UnityEditors/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Soft/UnityEditors/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Soft/UnityEditors/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Soft/UnityEditors/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006948 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 83.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.211 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1212ms)
+		BeginReloadAssembly (108ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (967ms)
+			LoadAssemblies (109ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (296ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (359ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (84ms)
+				BeforeProcessingInitializeOnLoad (39ms)
+				ProcessInitializeOnLoadAttributes (166ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.023577 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.151 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2152ms)
+		BeginReloadAssembly (294ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1737ms)
+			LoadAssemblies (247ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (573ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (105ms)
+			SetupLoadedEditorAssemblies (641ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (165ms)
+				ProcessInitializeOnLoadAttributes (419ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1923 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.4 MB.
+System memory in use after: 94.5 MB.
+
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2359.
+Total: 6.427100 ms (FindLiveObjects: 0.248600 ms CreateObjectMapping: 0.134600 ms MarkObjects: 5.877000 ms  DeleteObjects: 0.163500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/TryNewIsoetricRoom.unity
+  artifactKey: Guid(08bfb761353395e4394d782828fcedb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TryNewIsoetricRoom.unity using Guid(08bfb761353395e4394d782828fcedb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6ba94502baa4e9b8ca607224bc3d9d2') in 0.033677 seconds 
+  Import took 0.042250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.176593 seconds.
+  path: Assets/Scenes/TryNewIsometricRoom.unity
+  artifactKey: Guid(08bfb761353395e4394d782828fcedb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TryNewIsometricRoom.unity using Guid(08bfb761353395e4394d782828fcedb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f26047490ae509f0a8d6133387afe32b') in 0.002877 seconds 
+  Import took 0.009882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2360.752899 seconds.
+  path: Assets/Models/Build.fbx
+  artifactKey: Guid(b924247eadf213e4cb280b4c36fb01e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Build.fbx using Guid(b924247eadf213e4cb280b4c36fb01e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1601d4839f14e08720c35b08ed389a1c') in 1.898528 seconds 
+  Import took 2.003478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.029796 seconds.
+  path: Assets/Models/Build.fbx
+  artifactKey: Guid(b924247eadf213e4cb280b4c36fb01e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Build.fbx using Guid(b924247eadf213e4cb280b4c36fb01e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba1fc3ea84a476a61b8fdda50b58e7a') in 0.613171 seconds 
+  Import took 0.622034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 396.385368 seconds.
+  path: Assets/Models/Build.fbx
+  artifactKey: Guid(b924247eadf213e4cb280b4c36fb01e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Build.fbx using Guid(b924247eadf213e4cb280b4c36fb01e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85be0a6923fc72d24e4b64a7c7f38f4') in 0.630398 seconds 
+  Import took 0.639529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 716.552168 seconds.
+  path: Assets/Materials/Building
+  artifactKey: Guid(125390e7849857b4c9a5361d30640991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Building using Guid(125390e7849857b4c9a5361d30640991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a49a37833f1f7fc5d82e65ff982fcaf') in 0.002940 seconds 
+  Import took 0.010238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.639580 seconds.
+  path: Assets/Materials/Build
+  artifactKey: Guid(125390e7849857b4c9a5361d30640991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Build using Guid(125390e7849857b4c9a5361d30640991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '533d3eb4fa5d3e25425af5f49e4ae9ae') in 0.002343 seconds 
+  Import took 0.009520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3911.574008 seconds.
+  path: Assets/Materials/Build/Particle
+  artifactKey: Guid(802442b35fa453142bc8b168f2732ee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Build/Particle using Guid(802442b35fa453142bc8b168f2732ee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '595218c7e6e41175200c92a41453f1d8') in 0.005930 seconds 
+  Import took 0.059366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.880036 seconds.
+  path: Assets/Particles
+  artifactKey: Guid(fa91ba88c54d4034087fb7256f54dadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particles using Guid(fa91ba88c54d4034087fb7256f54dadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc1cb5b8973191bb4a4bf55a90d4d7a1') in 0.003249 seconds 
+  Import took 0.010050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 566.845327 seconds.
+  path: Assets/Sprites/vapor_cloud.png.crdownload
+  artifactKey: Guid(32c2a1875c3a1ea4d9a63db77b1b06d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/vapor_cloud.png.crdownload using Guid(32c2a1875c3a1ea4d9a63db77b1b06d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 1.497545 seconds  code(4) message(Build asset version error: assets/sprites/vapor_cloud.png.crdownload in SourceAssetDB has modification time of '2022-02-07T14:34:48.3223988Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff6ca5b8bdc (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6ca5bffd9 (Unity) StackWalker::ShowCallstack
+0x00007ff6cb31cd9c (Unity) GetStacktrace
+0x00007ff6cb4691a7 (Unity) GetAssetHashAndValidate
+0x00007ff6cb464573 (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff6cb4624e2 (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff6cb43cdcd (Unity) CreateAssetVersionBuilder
+0x00007ff6cb443605 (Unity) ImportToObjects
+0x00007ff6cb442458 (Unity) ImportAsset
+0x00007ff6cb3dc998 (Unity) AssetImportWorker::Import
+0x00007ff6cb40203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
+0x00007ff6cb4895a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff6cb48b700 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff6cb48ee7e (Unity) asio::io_service::run
+0x00007ff6cb42ab9b (Unity) RunAssetImportWorkerClientV2
+0x00007ff6cb42abf0 (Unity) RunAssetImporterV2
+0x00007ff6caed23dd (Unity) Application::InitializeProject
+0x00007ff6cb327252 (Unity) WinMain
+0x00007ff6cc9b5752 (Unity) __scrt_common_main_seh
+0x00007ffa58fd7034 (KERNEL32) BaseThreadInitThunk
+0x00007ffa592a2651 (ntdll) RtlUserThreadStart
+)
+  ERROR: Build asset version error: assets/sprites/vapor_cloud.png.crdownload in SourceAssetDB has modification time of '2022-02-07T14:34:48.3223988Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff6ca5b8bdc (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6ca5bffd9 (Unity) StackWalker::ShowCallstack
+0x00007ff6cb31cd9c (Unity) GetStacktrace
+0x00007ff6cb4691a7 (Unity) GetAssetHashAndValidate
+0x00007ff6cb464573 (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff6cb4624e2 (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff6cb43cdcd (Unity) CreateAssetVersionBuilder
+0x00007ff6cb443605 (Unity) ImportToObjects
+0x00007ff6cb442458 (Unity) ImportAsset
+0x00007ff6cb3dc998 (Unity) AssetImportWorker::Import
+0x00007ff6cb40203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
+0x00007ff6cb4895a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff6cb48b700 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff6cb48ee7e (Unity) asio::io_service::run
+0x00007ff6cb42ab9b (Unity) RunAssetImportWorkerClientV2
+0x00007ff6cb42abf0 (Unity) RunAssetImporterV2
+0x00007ff6caed23dd (Unity) Application::InitializeProject
+0x00007ff6cb327252 (Unity) WinMain
+0x00007ff6cc9b5752 (Unity) __scrt_common_main_seh
+0x00007ffa58fd7034 (KERNEL32) BaseThreadInitThunk
+0x00007ffa592a2651 (ntdll) RtlUserThreadStart
+
+  Import took 1.503772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.471039 seconds.
+  path: Assets/Sprites/vapor_cloud.png
+  artifactKey: Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/vapor_cloud.png using Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3a732bd11cdcdba92356d1e82eb3cd9') in 0.375251 seconds 
+  Import took 0.384249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.404142 seconds.
+  path: Assets/Sprites/vapor_cloud.png
+  artifactKey: Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/vapor_cloud.png using Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40dee676d96adf72dbbbef8a9636d1d0') in 0.021124 seconds 
+  Import took 0.028881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.592177 seconds.
+  path: Assets/Sprites/vapor_cloud.png
+  artifactKey: Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/vapor_cloud.png using Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaa39d731291ca4526d4d86e1449d8b8') in 0.268279 seconds 
+  Import took 0.274075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.849602 seconds.
+  path: Assets/Sprites/vapor_cloud.png
+  artifactKey: Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/vapor_cloud.png using Guid(24456abb1d4d9d64585c4a776f0dd54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f64a202c1eebca189ff36177588f4c3') in 0.079769 seconds 
+  Import took 0.086754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.948109 seconds.
+  path: Assets/Materials/Effects
+  artifactKey: Guid(0e7d170678716a84785e46744d3c3412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Effects using Guid(0e7d170678716a84785e46744d3c3412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8b5dc892114c743f59bace5f42da9e') in 0.002483 seconds 
+  Import took 0.010402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.921502 seconds.
+  path: Assets/Shaders/Hologram/Editor/Resources/banner.png
+  artifactKey: Guid(ef8b25d72d655ea43a516ddfda915254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Hologram/Editor/Resources/banner.png using Guid(ef8b25d72d655ea43a516ddfda915254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369e96b4f6cb0b1a848f58169e2a055a') in 0.026979 seconds 
+  Import took 0.033680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000556 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_diffuseOriginal.png
+  artifactKey: Guid(5c60951188f288d45b8481890e5856cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_diffuseOriginal.png using Guid(5c60951188f288d45b8481890e5856cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4af01f88f4a66dd8cb9d26754285a12') in 0.302751 seconds 
+  Import took 0.308060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/Shaders/PostProcessing/Utilities/CustomMotionTexture/Textures/DebugMotionVectors.png
+  artifactKey: Guid(3aac3087967ea4fae858ec0494fd24d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Utilities/CustomMotionTexture/Textures/DebugMotionVectors.png using Guid(3aac3087967ea4fae858ec0494fd24d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b22f6a9fefd466a93f84e678542dfe') in 0.032029 seconds 
+  Import took 0.037820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000468 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_height.png
+  artifactKey: Guid(a22f9dbeeb5360c49a00a19c7470d844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_height.png using Guid(a22f9dbeeb5360c49a00a19c7470d844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '486058c8da4e399d5dc6b5b9b412a71c') in 0.110679 seconds 
+  Import took 0.116643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.554153 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_metallic.png
+  artifactKey: Guid(b79b50733f91e1c489644b1f148cd57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_metallic.png using Guid(b79b50733f91e1c489644b1f148cd57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2078ec3521e1459465b9311ff766dedc') in 0.114452 seconds 
+  Import took 0.121506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000568 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_diffuseOriginal.png
+  artifactKey: Guid(95c46a83de7caa545ae302e644996266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_diffuseOriginal.png using Guid(95c46a83de7caa545ae302e644996266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932b66bedbc9adc77f076f5f61667de6') in 0.111309 seconds 
+  Import took 0.117577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000583 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_normal.png
+  artifactKey: Guid(2c176a439dde8db48b28c7d68c0d5e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GLassEdgeShadowRed/GlassEdgeShadowRed_normal.png using Guid(2c176a439dde8db48b28c7d68c0d5e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d9fcd9d4c24eb489b873a6d89f7066') in 0.116030 seconds 
+  Import took 0.122091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000568 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_height.png
+  artifactKey: Guid(8949e197c8eba924b9d92afdf0a3c723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_height.png using Guid(8949e197c8eba924b9d92afdf0a3c723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd95237172fc614ce56a0bb11a824fc7d') in 0.112677 seconds 
+  Import took 0.119033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000566 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_height.png
+  artifactKey: Guid(0952f51b3e11c0d4dbd8ad371460ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_height.png using Guid(0952f51b3e11c0d4dbd8ad371460ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90607956bb03f5231c70e8fefe9f5b70') in 0.100158 seconds 
+  Import took 0.106131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000557 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_metallic.png
+  artifactKey: Guid(749b2f023098d9449bcaeed19f10d0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_metallic.png using Guid(749b2f023098d9449bcaeed19f10d0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1b67f8f2e4d6b2ab7f255ec3e174142') in 0.098445 seconds 
+  Import took 0.104136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000628 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_diffuseOriginal.png
+  artifactKey: Guid(cf1a2147b66cbce4b81d15da482ad704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_diffuseOriginal.png using Guid(cf1a2147b66cbce4b81d15da482ad704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6f763b294ff9e6b78d24e95bea91e5') in 0.236177 seconds 
+  Import took 0.243514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000539 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_normal.png
+  artifactKey: Guid(ce9f9485e2f9ac64586991868ffa1c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassSolidStripe/GlassSolidStripe_normal.png using Guid(ce9f9485e2f9ac64586991868ffa1c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f93f89f3548a914397b9895efffb77da') in 0.099293 seconds 
+  Import took 0.104534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000608 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_normal.png
+  artifactKey: Guid(d61bad7062b6bd845bc3513649ae48ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_normal.png using Guid(d61bad7062b6bd845bc3513649ae48ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80fdbfce3a46921fd1bd164160f836af') in 0.116915 seconds 
+  Import took 0.123223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_5.png
+  artifactKey: Guid(a1ae041906217ae44a774d4ca139af50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_5.png using Guid(a1ae041906217ae44a774d4ca139af50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aeb0a17aa5c0d4f34adf1b8d83ce025') in 0.039425 seconds 
+  Import took 0.046372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_7.png
+  artifactKey: Guid(3ac02e7e783571c468f9c086d2384ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_7.png using Guid(3ac02e7e783571c468f9c086d2384ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '310acc4eaad34aa53ad7b739711fea77') in 0.022243 seconds 
+  Import took 0.028660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000584 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_6.png
+  artifactKey: Guid(79b86f3419b87f3429164a956da8cfab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_6.png using Guid(79b86f3419b87f3429164a956da8cfab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc2dd7ab53a19e06cb7dd7839721c08a') in 0.023425 seconds 
+  Import took 0.029206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000546 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_8.png
+  artifactKey: Guid(c55042318a938344ab23cd7f09dd0076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_8.png using Guid(c55042318a938344ab23cd7f09dd0076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a988269e9d5615272ab41eeab8f8ee') in 0.024348 seconds 
+  Import took 0.031051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000558 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_10.png
+  artifactKey: Guid(afe1e502240079342a0a980484b6da8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_10.png using Guid(afe1e502240079342a0a980484b6da8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc0b635335a963a3989beefe14c599a8') in 0.022338 seconds 
+  Import took 0.028036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000499 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_diffuseOriginal.png
+  artifactKey: Guid(c58de019b00a4ac4f931436ffca855ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_diffuseOriginal.png using Guid(c58de019b00a4ac4f931436ffca855ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31164b1cb0f2da36ec5cd19964eb3f7f') in 0.108616 seconds 
+  Import took 0.113919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000577 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_9.png
+  artifactKey: Guid(71583cfd8899717428d5b1a95fa39cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_9.png using Guid(71583cfd8899717428d5b1a95fa39cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aa1e3e4ba53623d358bfb95a8a0e5cf') in 0.022137 seconds 
+  Import took 0.027027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000549 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_metallic.png
+  artifactKey: Guid(d470632064594774a906786a935b2747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/GlassFrame/GlassWindowFrame_metallic.png using Guid(d470632064594774a906786a935b2747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd10ddd36d6b0f9d04c6b40b5d6cf6a0c') in 0.107047 seconds 
+  Import took 0.114068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_1.png
+  artifactKey: Guid(3c2f1fb7e4b66e74191b7c328ada52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_1.png using Guid(3c2f1fb7e4b66e74191b7c328ada52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a740fd7f124810013acf39429a5f6c4') in 0.028747 seconds 
+  Import took 0.033948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/TinyFire VFX/Textures/Hexagon.png
+  artifactKey: Guid(d4017144ccddf78409031dab3aefc633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TinyFire VFX/Textures/Hexagon.png using Guid(d4017144ccddf78409031dab3aefc633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae2ee8bdf136b0d4b988c135f1105b3c') in 0.023213 seconds 
+  Import took 0.029886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000524 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_11.png
+  artifactKey: Guid(771903fe7b4674445829e52e91cff019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_11.png using Guid(771903fe7b4674445829e52e91cff019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb87e4970ce2903e16dcd0539534cca6') in 0.015864 seconds 
+  Import took 0.022150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000677 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_normal.png
+  artifactKey: Guid(7090e73c6e8078e4eb7958a7c963e297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_normal.png using Guid(7090e73c6e8078e4eb7958a7c963e297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a2c0fd2c1f73167ce4ef0424d3aab88') in 0.111436 seconds 
+  Import took 0.117649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000539 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_29.png
+  artifactKey: Guid(aa80dc44aa4fe4c43bb9d51d90cf2958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_29.png using Guid(aa80dc44aa4fe4c43bb9d51d90cf2958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be471fdcdee4e97c3d75bdeb00018e17') in 0.022565 seconds 
+  Import took 0.029400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000602 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_21.png
+  artifactKey: Guid(b7f000750830ddb4bbc80065b9314ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_21.png using Guid(b7f000750830ddb4bbc80065b9314ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f1d10d9409987951f0275cd8b2ea2e') in 0.022031 seconds 
+  Import took 0.028208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000539 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_31.png
+  artifactKey: Guid(6b0a189df0bd4d5448eaefb4e673ace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_31.png using Guid(6b0a189df0bd4d5448eaefb4e673ace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f3c37856b3ac20fd2e1310e31860ce0') in 0.017584 seconds 
+  Import took 0.023615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000555 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_23.png
+  artifactKey: Guid(bfe953600e8fb1849a804ee08ace7b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_23.png using Guid(bfe953600e8fb1849a804ee08ace7b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c73ca17abf381f2ead5ba2fa1aa00d') in 0.020311 seconds 
+  Import took 0.026933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_22.png
+  artifactKey: Guid(df01d03f056c6f445b4b8a0ae054207c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_22.png using Guid(df01d03f056c6f445b4b8a0ae054207c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a619de6184f0d7d94dd07c1d0acc53d') in 0.021303 seconds 
+  Import took 0.028264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000560 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_19.png
+  artifactKey: Guid(729a3ae164bcb3b4380459386adcf331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_19.png using Guid(729a3ae164bcb3b4380459386adcf331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb14fcb667b349d287a461fb96324dc') in 0.016685 seconds 
+  Import took 0.023267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000640 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_26.png
+  artifactKey: Guid(09f6c01f98a3ded4daf1afc52a3c260f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_26.png using Guid(09f6c01f98a3ded4daf1afc52a3c260f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dc4cb7753ca0a6617af705f06392c86') in 0.022738 seconds 
+  Import took 0.028293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000541 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_4.png
+  artifactKey: Guid(6fa5cf178eaaa5f42b820f636bb6e0bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_4.png using Guid(6fa5cf178eaaa5f42b820f636bb6e0bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ac7cb047c31934031c5b53f4b9ca82f') in 0.022812 seconds 
+  Import took 0.028307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000510 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_3.png
+  artifactKey: Guid(373f9bf6b0841af4ebf26d25e4a3f4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_3.png using Guid(373f9bf6b0841af4ebf26d25e4a3f4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c41cf845441720187b224bdac5fa93e7') in 0.021200 seconds 
+  Import took 0.028042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_12.png
+  artifactKey: Guid(980acadb960f8424c94307ec0e585b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_12.png using Guid(980acadb960f8424c94307ec0e585b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878b63cf564007b78b643cad3b741768') in 0.015496 seconds 
+  Import took 0.021417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_2.png
+  artifactKey: Guid(a469f920b21fc7c4fb5b950917ce2fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_2.png using Guid(a469f920b21fc7c4fb5b950917ce2fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b597a3fe99abf0f182975d156e452eb1') in 0.017735 seconds 
+  Import took 0.023665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000589 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_metallic.png
+  artifactKey: Guid(8096f4586061ed54ea91314de82dd964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_metallic.png using Guid(8096f4586061ed54ea91314de82dd964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97c6f051ea98ba0dc28bdc2105fc3fa9') in 0.103132 seconds 
+  Import took 0.110537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000722 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_39.png
+  artifactKey: Guid(547dbd5f858c74047ba3f213e4408307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_39.png using Guid(547dbd5f858c74047ba3f213e4408307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5416eb7acfea25ce9f56f8743835a37') in 0.016744 seconds 
+  Import took 0.022873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000499 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_40.png
+  artifactKey: Guid(1a9ce5640cde5934aae0022f020464a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_40.png using Guid(1a9ce5640cde5934aae0022f020464a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f2d8ca5656943fd54968f07d14c4c9') in 0.016195 seconds 
+  Import took 0.022766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000523 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_32.png
+  artifactKey: Guid(87a5e40cc271ea648b583616f6ebe7fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_32.png using Guid(87a5e40cc271ea648b583616f6ebe7fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c483ae5d3d55dc679febef8bde9901f') in 0.021298 seconds 
+  Import took 0.027349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000599 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_16.png
+  artifactKey: Guid(153f7d6dfbe713d4884df0f1e243ba92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_16.png using Guid(153f7d6dfbe713d4884df0f1e243ba92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69bd2816d7f4956c3b7f48635b3f9c36') in 0.016729 seconds 
+  Import took 0.022478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000633 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_30.png
+  artifactKey: Guid(0fa10b21877c61b4db40ba5708815f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_30.png using Guid(0fa10b21877c61b4db40ba5708815f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee16e32222c486d2d298fd6fd1fb99e6') in 0.016457 seconds 
+  Import took 0.021979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000570 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_18.png
+  artifactKey: Guid(74aca53eb7273624baffc2bf5e5cc173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_18.png using Guid(74aca53eb7273624baffc2bf5e5cc173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3ff32319c38f8f47864cea249e631b1') in 0.018227 seconds 
+  Import took 0.023914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000466 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_15.png
+  artifactKey: Guid(2ee161d8945169243b5698fec114e1b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_15.png using Guid(2ee161d8945169243b5698fec114e1b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffba63ce2544e0ba62ba5961ca529e5f') in 0.016859 seconds 
+  Import took 0.022267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000466 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_38.png
+  artifactKey: Guid(9660a4ca1ca8425408ac25c641932977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_38.png using Guid(9660a4ca1ca8425408ac25c641932977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17aeb1a75e585819504c518518af424') in 0.014406 seconds 
+  Import took 0.020935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000529 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_14.png
+  artifactKey: Guid(f6439b54b28f3884eb67579dec0b6f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_14.png using Guid(f6439b54b28f3884eb67579dec0b6f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d0e374c9a48c13d626fc130db8df3da') in 0.021110 seconds 
+  Import took 0.027217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000585 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_28.png
+  artifactKey: Guid(02c0a84bd64c6f044954d8bde9b46ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_28.png using Guid(02c0a84bd64c6f044954d8bde9b46ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '198ab35b012b2941e2c44d141730a667') in 0.015795 seconds 
+  Import took 0.022019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_20.png
+  artifactKey: Guid(6dda07f1420a968449cf4c6620c44d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_20.png using Guid(6dda07f1420a968449cf4c6620c44d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3e6cf85aff38fa8aba6d2f79391a3d7') in 0.020731 seconds 
+  Import took 0.026168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000511 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_36.png
+  artifactKey: Guid(351e95d0e20a54849bd4ce5f9b498934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_36.png using Guid(351e95d0e20a54849bd4ce5f9b498934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fba3e2a570ac94baac5eaee7640d731') in 0.015113 seconds 
+  Import took 0.021460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000468 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_27.png
+  artifactKey: Guid(bdd06fb88ef36ed4a85dd506352c2d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_27.png using Guid(bdd06fb88ef36ed4a85dd506352c2d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99d9f52b82df2b80a200b16b2de6ab2c') in 0.019299 seconds 
+  Import took 0.025165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_24.png
+  artifactKey: Guid(32c6a5f7143b86c44bd5cdee2ff3f8ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_24.png using Guid(32c6a5f7143b86c44bd5cdee2ff3f8ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4294e341c118baf5d0bb90083e06435') in 0.022369 seconds 
+  Import took 0.029801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000560 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_25.png
+  artifactKey: Guid(f4b8ab78b57749d4e96d36f6d8a395d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_25.png using Guid(f4b8ab78b57749d4e96d36f6d8a395d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f8d3ff04782f4a5ace28d25dacf018') in 0.018570 seconds 
+  Import took 0.024706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000482 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_34.png
+  artifactKey: Guid(319b8e66db3faa4438cf6982e9c89b2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_34.png using Guid(319b8e66db3faa4438cf6982e9c89b2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3145d1dccc9dbaa3b99b2adff99ff1f') in 0.019181 seconds 
+  Import took 0.024978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_13.png
+  artifactKey: Guid(68613e6a221be1a4b9f31d7fa1c2d1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_13.png using Guid(68613e6a221be1a4b9f31d7fa1c2d1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b98b79f9c36a4eb25b6359216df84a') in 0.021234 seconds 
+  Import took 0.027027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_33.png
+  artifactKey: Guid(b71bb466b71fd13449dd736f63caeb67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_33.png using Guid(b71bb466b71fd13449dd736f63caeb67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fe929076eb0403a657ea255330d5926') in 0.021139 seconds 
+  Import took 0.026697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000536 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_17.png
+  artifactKey: Guid(bf95b6fdc179b0e4f890c841406193fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_17.png using Guid(bf95b6fdc179b0e4f890c841406193fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77462f77ec16011faa7508b9a97e0f7') in 0.021993 seconds 
+  Import took 0.028163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_height.png
+  artifactKey: Guid(bd0b3cf6e17611f47a6b7cf4f3d6db1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Textures/Glass Reflection 2/GlassReflection2_height.png using Guid(bd0b3cf6e17611f47a6b7cf4f3d6db1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a01bf016f35f1f9ec1fcc457f046434b') in 0.117074 seconds 
+  Import took 0.124148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000488 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_35.png
+  artifactKey: Guid(0a79c155edf9b2d429d4736abee5acdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_35.png using Guid(0a79c155edf9b2d429d4736abee5acdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d659ed48ae8a1179e5fc58dba9a449') in 0.015300 seconds 
+  Import took 0.020865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000521 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_0.png
+  artifactKey: Guid(50b54341495978843a6f85583ed4417d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_0.png using Guid(50b54341495978843a6f85583ed4417d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba83359a5018e9e1d256c175df3018e') in 0.022399 seconds 
+  Import took 0.028138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000518 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_37.png
+  artifactKey: Guid(1d6958e30e40a254dbe5a54c573eeb3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_37.png using Guid(1d6958e30e40a254dbe5a54c573eeb3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac4caafd71b31592bec1b45ce724c39') in 0.020331 seconds 
+  Import took 0.025604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.587281 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_41.png
+  artifactKey: Guid(cd9006dc442cc244e89b3f492384d46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_41.png using Guid(cd9006dc442cc244e89b3f492384d46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '729ce1936eefe2811fd8611688f0d219') in 0.028543 seconds 
+  Import took 0.034254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000516 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_42.png
+  artifactKey: Guid(b266511438fae724f9d3ce6bd26583e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_42.png using Guid(b266511438fae724f9d3ce6bd26583e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd3d64efe8fb3ff4ce009d095cc6286') in 0.016085 seconds 
+  Import took 0.021751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_44.png
+  artifactKey: Guid(15e54aa23a938444389469d53765d741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_44.png using Guid(15e54aa23a938444389469d53765d741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40791b8bbceac1929d40716b609a6d3') in 0.015035 seconds 
+  Import took 0.020044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000565 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_45.png
+  artifactKey: Guid(b9960364038cbfa4aa49d7b2032d3110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_45.png using Guid(b9960364038cbfa4aa49d7b2032d3110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b8b3a64e099063de0d413568fa219c') in 0.024708 seconds 
+  Import took 0.030364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000516 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_47.png
+  artifactKey: Guid(1378a33cdd085d64c9da863d2484ff21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_47.png using Guid(1378a33cdd085d64c9da863d2484ff21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca690b8472e12e96cb5c75276d5af869') in 0.021345 seconds 
+  Import took 0.026588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000538 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_54.png
+  artifactKey: Guid(936dea238abb0864ab3985a995e16a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_54.png using Guid(936dea238abb0864ab3985a995e16a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1d8b4ad10e2f11d212e2b809850f0e') in 0.021642 seconds 
+  Import took 0.026902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000725 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_53.png
+  artifactKey: Guid(c94b57b5a32a22d43ade66e09f6a4bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_53.png using Guid(c94b57b5a32a22d43ade66e09f6a4bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d410fa6b6240048c110bf4032d522d7') in 0.021577 seconds 
+  Import took 0.027202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000557 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_50.png
+  artifactKey: Guid(d8c290e38ff0425409d0ae6a98c95e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_50.png using Guid(d8c290e38ff0425409d0ae6a98c95e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4174be3ae50747a87ae35a4aa7a1f269') in 0.015826 seconds 
+  Import took 0.022207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000579 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_49.png
+  artifactKey: Guid(3f7c3687170b90e4a8d2ee6b142670f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_49.png using Guid(3f7c3687170b90e4a8d2ee6b142670f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '857ba70f06ecc210321dd160c486f96a') in 0.022305 seconds 
+  Import took 0.028722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_48.png
+  artifactKey: Guid(aff59c63d25d43f4c938f248837c30fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_48.png using Guid(aff59c63d25d43f4c938f248837c30fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12fd160e263796180b392422259d374') in 0.017069 seconds 
+  Import took 0.022619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000554 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_51.png
+  artifactKey: Guid(d5a51525b27e3ee4aadbeb39cbcf0750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_51.png using Guid(d5a51525b27e3ee4aadbeb39cbcf0750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b537ac57c5917a326d7bc7147995162c') in 0.019363 seconds 
+  Import took 0.025422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000506 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_46.png
+  artifactKey: Guid(8ecbbcae4cc747a4abbc4adce795d25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_46.png using Guid(8ecbbcae4cc747a4abbc4adce795d25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c783bd9a436f9444a9f5c6cb9cfd41e6') in 0.021203 seconds 
+  Import took 0.027140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000523 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_43.png
+  artifactKey: Guid(71bc1b6b66e8b784b972199b7e90204e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_43.png using Guid(71bc1b6b66e8b784b972199b7e90204e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '069d4dd36428b4ef31f563d3ab274f85') in 0.021154 seconds 
+  Import took 0.027107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000614 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_52.png
+  artifactKey: Guid(d2e8e90fac2e6a341a38e1c3963c218d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_52.png using Guid(d2e8e90fac2e6a341a38e1c3963c218d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de90cffba5070588e94234491f17b4b0') in 0.021769 seconds 
+  Import took 0.027280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.063254 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_55.png
+  artifactKey: Guid(5e542d0126a2c7848b66bffc428905fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_55.png using Guid(5e542d0126a2c7848b66bffc428905fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e15bb0ea6973236eb896ab653078ca43') in 0.023401 seconds 
+  Import took 0.029074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_61.png
+  artifactKey: Guid(119591e0bb084e848835d237546b3882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_61.png using Guid(119591e0bb084e848835d237546b3882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9944d4bae5a57fd62312ab6c795bfe08') in 0.016391 seconds 
+  Import took 0.023226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt02.png
+  artifactKey: Guid(a2960ffde020f27409e070d92fb2e00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt02.png using Guid(a2960ffde020f27409e070d92fb2e00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a65e5f606833459dbeb541a8bb2d861') in 0.050817 seconds 
+  Import took 0.057143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000509 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_63.png
+  artifactKey: Guid(4a11d65ce13d5f542a0ff136cc2f3fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_63.png using Guid(4a11d65ce13d5f542a0ff136cc2f3fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e7749210d859474070e04264bf8461d') in 0.021128 seconds 
+  Import took 0.026850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000491 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_60.png
+  artifactKey: Guid(404fa8def46b1c447817e1ebdaa7144e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_60.png using Guid(404fa8def46b1c447817e1ebdaa7144e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef23f3052a678c76ce4ecd8923c9d274') in 0.015545 seconds 
+  Import took 0.022519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/FlexibleCelShader/Example/Example Scene/Lightmap-0_comp_dir.png
+  artifactKey: Guid(6d87e2b0797b6624ab0d7c9b6836e5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FlexibleCelShader/Example/Example Scene/Lightmap-0_comp_dir.png using Guid(6d87e2b0797b6624ab0d7c9b6836e5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17b3e4b93e57c950d67d0570ce58caf') in 0.025498 seconds 
+  Import took 0.031196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000485 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_56.png
+  artifactKey: Guid(70f23eaf7d8ae9147aa542d20e93733b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_56.png using Guid(70f23eaf7d8ae9147aa542d20e93733b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fabbea9f39d0823530544d7e2e3bb6d6') in 0.022639 seconds 
+  Import took 0.028369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_59.png
+  artifactKey: Guid(d96974690c77f50489eb60ec84bd8dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_59.png using Guid(d96974690c77f50489eb60ec84bd8dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5fecc625814183eca7a6f6da80cd41c') in 0.016417 seconds 
+  Import took 0.022878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000439 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt00.png
+  artifactKey: Guid(69e847bbff1cf5449a4ee0bbd045dbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt00.png using Guid(69e847bbff1cf5449a4ee0bbd045dbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6132d339d4ea8520b532d5a52b06d0c9') in 0.029717 seconds 
+  Import took 0.034826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000491 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_62.png
+  artifactKey: Guid(a03c400b0e3959f428ee99dfc6cfc263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_62.png using Guid(a03c400b0e3959f428ee99dfc6cfc263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada009beb47a0e3700f191dd9c808324') in 0.015701 seconds 
+  Import took 0.021241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000502 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_57.png
+  artifactKey: Guid(e138166e7a7c70f49943be7edda35d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_57.png using Guid(e138166e7a7c70f49943be7edda35d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9c2ea31477689dd3c9c5299b7959736') in 0.021772 seconds 
+  Import took 0.027966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000443 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt01.png
+  artifactKey: Guid(3884f7a2d04ffe8409ad9200b275896f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt01.png using Guid(3884f7a2d04ffe8409ad9200b275896f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5dfdd3c2782b3f195d2622743559ef5') in 0.030053 seconds 
+  Import took 0.035421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt03.png
+  artifactKey: Guid(7a051dbda2d7bc447bee412427cd311e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Lens Dirt/LensDirt03.png using Guid(7a051dbda2d7bc447bee412427cd311e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994862912877060cb6a866a7f121ecc8') in 0.027167 seconds 
+  Import took 0.033313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000490 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/LUTs/NeutralLUT_16.png
+  artifactKey: Guid(e45483e270a314c4bbc6e317771d56ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/LUTs/NeutralLUT_16.png using Guid(e45483e270a314c4bbc6e317771d56ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d648de118e75cce3583f0c5dcaafe4') in 0.021867 seconds 
+  Import took 0.027678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Shaders/PostProcessing/Editor Resources/UI/MotionBlendingIcon.png
+  artifactKey: Guid(c0fa58091049bd24394fa15b0b6d4c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Editor Resources/UI/MotionBlendingIcon.png using Guid(c0fa58091049bd24394fa15b0b6d4c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6110e76d9628b2ef861639bef41434d1') in 0.022911 seconds 
+  Import took 0.029305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000513 seconds.
+  path: Assets/Glass 4 Pack FREE/Demo_Glass4Pack/ReflectionProbe-0.exr
+  artifactKey: Guid(c9ed4d73e220f1642a00a79309853e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Glass 4 Pack FREE/Demo_Glass4Pack/ReflectionProbe-0.exr using Guid(c9ed4d73e220f1642a00a79309853e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2737de07ed0af9f276d5e922dcbda2') in 0.116814 seconds 
+  Import took 0.123184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/Scenes/UpdatedGamePlay/ReflectionProbe-0.exr
+  artifactKey: Guid(7628b505da0e8464abce8e8bb4fdeb06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UpdatedGamePlay/ReflectionProbe-0.exr using Guid(7628b505da0e8464abce8e8bb4fdeb06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c41724389c709ea8089da17f250d1f') in 0.018985 seconds 
+  Import took 0.023953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000481 seconds.
+  path: Assets/FlexibleCelShader/Example/Example Scene/Lightmap-0_comp_light.exr
+  artifactKey: Guid(c3d5cd7bc39522549a80fbb3bc330b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FlexibleCelShader/Example/Example Scene/Lightmap-0_comp_light.exr using Guid(c3d5cd7bc39522549a80fbb3bc330b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d281cfeb021e71e10914884556effec') in 0.030033 seconds 
+  Import took 0.036499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000481 seconds.
+  path: Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_58.png
+  artifactKey: Guid(85a45a6d8b2ffb84987d2b028ecfb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Resources/Bluenoise64/LDR_LLL1_58.png using Guid(85a45a6d8b2ffb84987d2b028ecfb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c03b6b06c65761fc652b87d00e386881') in 0.017717 seconds 
+  Import took 0.023633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/LUTs/NeutralLUT_32.png
+  artifactKey: Guid(4f98e9c96c8a48541b5eb704e92d99b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/LUTs/NeutralLUT_32.png using Guid(4f98e9c96c8a48541b5eb704e92d99b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35728df1e23a7d7cbc69c8cf21d6392d') in 0.020251 seconds 
+  Import took 0.027624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.451175 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_BlueRed.tga
+  artifactKey: Guid(318cbcd94840f1d48aca4d86234dc2e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_BlueRed.tga using Guid(318cbcd94840f1d48aca4d86234dc2e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0850e19e9ddfeaf53410ac69b32d4e81') in 0.029730 seconds 
+  Import took 0.035382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000537 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_PurpleGreen.tga
+  artifactKey: Guid(42183971d24cfe443a346e7ec6e83bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_PurpleGreen.tga using Guid(42183971d24cfe443a346e7ec6e83bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f489d023f754b154fc110682e10e1d06') in 0.019824 seconds 
+  Import took 0.024934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000524 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_GreenPurple.tga
+  artifactKey: Guid(4a8f054acfbd08043a931cd22760758d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_GreenPurple.tga using Guid(4a8f054acfbd08043a931cd22760758d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f692cc5b4aa980471f2d21e1a517878') in 0.014813 seconds 
+  Import took 0.020053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000535 seconds.
+  path: Assets/TinyFire VFX/Textures/Sphere.png
+  artifactKey: Guid(c30b701920f77de428259cc41556ae17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TinyFire VFX/Textures/Sphere.png using Guid(c30b701920f77de428259cc41556ae17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a9a52d64ebc0bafe216e8f9c84ecbdd') in 0.017076 seconds 
+  Import took 0.023094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_RedBlue.tga
+  artifactKey: Guid(ff5f3317371838d4fa16ac6c2acf2040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Textures/Spectral LUTs/SpectralLut_RedBlue.tga using Guid(ff5f3317371838d4fa16ac6c2acf2040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bccf944a03c2d3d7960e191c3c5cb070') in 0.019882 seconds 
+  Import took 0.025397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.329580 seconds.
+  path: Assets/TinyFire VFX/Textures/Star.png
+  artifactKey: Guid(d64df6aaf6093d449b671ca7d5ac4acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TinyFire VFX/Textures/Star.png using Guid(d64df6aaf6093d449b671ca7d5ac4acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02fbc007bb86ed8abe36727194395e44') in 0.028233 seconds 
+  Import took 0.034189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000541 seconds.
+  path: Assets/TinyFire VFX/Textures/Triangle.png
+  artifactKey: Guid(aaea991fe18e861409db6e2e524923be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TinyFire VFX/Textures/Triangle.png using Guid(aaea991fe18e861409db6e2e524923be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ecf55dacfcc615ab86183485809162') in 0.020818 seconds 
+  Import took 0.027267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000604 seconds.
+  path: Assets/Shaders/PostProcessing/Utilities/CustomMotionTexture/Textures/WheelMotionVectors.png
+  artifactKey: Guid(d1cc06458fe724df8837423c0a2f8f93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Utilities/CustomMotionTexture/Textures/WheelMotionVectors.png using Guid(d1cc06458fe724df8837423c0a2f8f93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6d54728f2ed740610ddcbe4d5eb60e') in 0.029273 seconds 
+  Import took 0.034597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000524 seconds.
+  path: Assets/Shaders/PostProcessing/Utilities/CustomMotionTexture/Textures/UVChecker.png
+  artifactKey: Guid(a08960dd6e8274e7f8fca616e09c48ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/PostProcessing/Utilities/CustomMotionTexture/Textures/UVChecker.png using Guid(a08960dd6e8274e7f8fca616e09c48ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c16b8648a81280357f902849729a62d') in 0.024640 seconds 
+  Import took 0.031948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 179.216145 seconds.
+  path: Assets/Sprites/cloud.png
+  artifactKey: Guid(26316f3a04c60434682818145f183ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/cloud.png using Guid(26316f3a04c60434682818145f183ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3538c40565cbc64cab65c7449f29789') in 0.027723 seconds 
+  Import took 0.034880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.816146 seconds.
+  path: Assets/Sprites/cloud.png
+  artifactKey: Guid(26316f3a04c60434682818145f183ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/cloud.png using Guid(26316f3a04c60434682818145f183ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e667d1a5425010c4f89c7c38484dc701') in 0.024576 seconds 
+  Import took 0.032222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 381.423510 seconds.
+  path: Assets/Materials/Effects/Cloud.mat
+  artifactKey: Guid(5c2e8ef34fdc2a146981f23a1c47d1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Effects/Cloud.mat using Guid(5c2e8ef34fdc2a146981f23a1c47d1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46d355943cd7cfc2504f3dcdb89feac7') in 0.113450 seconds 
+  Import took 0.120031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 467.242307 seconds.
+  path: Assets/Materials/Build/InRoom
+  artifactKey: Guid(2d78763d12dc6b04baf5601ed72b6fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Build/InRoom using Guid(2d78763d12dc6b04baf5601ed72b6fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '414e417cea263b87d7acacf1c6c87c19') in 0.002528 seconds 
+  Import took 0.008795 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

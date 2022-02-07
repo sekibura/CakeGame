@@ -6754,6 +6754,9 @@ MonoBehaviour:
   _Maxscore: {fileID: 1748268894}
   _money: {fileID: 378262237}
   _toDark: {fileID: 2120416041}
+  _maxScore: {fileID: 908594102}
+  _currentScore: {fileID: 932769233}
+  _addMoney: {fileID: 1612214390}
 --- !u!4 &586652111
 Transform:
   m_ObjectHideFlags: 0
@@ -13891,7 +13894,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.9568628, g: 0.7803922, b: 0.7607844, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 1
@@ -20488,7 +20491,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1

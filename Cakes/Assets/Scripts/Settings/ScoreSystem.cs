@@ -6,10 +6,12 @@ public  class ScoreSystem: MonoBehaviour
 {
     public static ScoreSystem Instance = null;
     public static int CurrentScore=0;
+    public static int CurrentMoney = 0;
 
     private void Start()
     {
-
+        CurrentScore = 0;
+        CurrentMoney = 0;
         if (Instance == null)
         {
             Instance = this;

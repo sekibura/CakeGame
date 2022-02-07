@@ -23,6 +23,16 @@ public class GamePlayUI : MonoBehaviour
     [SerializeField]
     private GameObject _toDark;
 
+    #region GameOverScreen
+    [Header("GameOver Screen")]
+    [SerializeField]
+    private TMP_Text _maxScore;
+    [SerializeField]
+    private TMP_Text _currentScore;
+    [SerializeField]
+    private TMP_Text _addMoney;
+    #endregion
+
 
     private void Start()
     {
@@ -56,9 +66,12 @@ public class GamePlayUI : MonoBehaviour
         _money.text = ScoreSystem.Instance.GetMoney().ToString();
     }
 
-    public void GameOver()
+    public void GameOver(int currentScore, int maxScore, int coins)
     {
         _gameOverMenu.SetActive(true);
+        _maxScore.text = maxScore.ToString();
+        _currentScore.text = currentScore.ToString();
+        _addMoney.text = "+" + coins.ToString();
     }
 
     public void ToDark()
