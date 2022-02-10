@@ -8,6 +8,10 @@ TagManager:
   - ChooseZone
   - DestroyZone
   - BoxZone
+  - StopZone
+  - FadeInZone
+  - FadeOutZone
+  - ChangeColorZone
   layers:
   - Default
   - TransparentFX

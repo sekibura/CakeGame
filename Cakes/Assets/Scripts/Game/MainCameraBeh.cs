@@ -6,18 +6,19 @@ public class MainCameraBeh : MonoBehaviour
 {
     [SerializeField]
     private GameObject _faceWalls;
+    FadeGameObjects fader;
 
     void Start()
     {
+        fader = FindObjectOfType<FadeGameObjects>();
         Invoke("StartAnimation", 1);
     }
 
     private void StartAnimation()
     {
-        FadeGameObjects fader = new FadeGameObjects();
-        fader.FadeIn(_faceWalls);
+        fader.FadeIn(_faceWalls, 1);
         gameObject.GetComponent<Animator>().Play("Start");
-        Invoke("TurnOff", 3);
+        Invoke("TurnOff", 1);
     }
 
     private void TurnOff()

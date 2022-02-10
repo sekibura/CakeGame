@@ -11,8 +11,14 @@ public class Follower : MonoBehaviour
     private PathCreator _mainPath;
     [SerializeField]
     private float _speed = 5;
+    private float _defaultSpeed;
     private float distanceTravelled;
 
+    private void Start()
+    {
+        _defaultSpeed = _speed;
+        _currentPath = _mainPath;
+    }
 
     public void SetValues(PathCreator mainPath,  float speed)
     {
@@ -24,6 +30,13 @@ public class Follower : MonoBehaviour
     {
         _speed = speed;
     }
+
+    public void ResetSpeed()
+    {
+        _speed = _defaultSpeed;
+        Debug.Log("_speed = " + _speed);
+    }
+
     private void OnEnable()
     {
         distanceTravelled = 0;
@@ -33,5 +46,10 @@ public class Follower : MonoBehaviour
     {
         distanceTravelled += _speed * Time.deltaTime;
         transform.position = _currentPath.path.GetPointAtDistance(distanceTravelled);
+    }
+
+    public void SetDistance(float distanceTravelled)
+    {
+        this.distanceTravelled = distanceTravelled;
     }
 }

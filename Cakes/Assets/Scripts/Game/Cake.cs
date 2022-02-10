@@ -29,7 +29,7 @@ public class Cake : MonoBehaviour
 
     private string _lastTag = null;
 
-    private float _speedMovingToBox = 8f;
+    private float _speedMovingToBox = 3f;
     private Color _color;
 
     [SerializeField]
@@ -46,15 +46,22 @@ public class Cake : MonoBehaviour
     private int _profit;
     #endregion
 
-   
+    private Vector3 _defaultScale;
 
     private void Start()
     {
         InitMeshRenderers();
         SetMaterial(_defaultMaterial);
         _color = Color.red;
-        
+
+        //Debug.Log(_defaultScale);
     }
+    private void Awake()
+    {
+        _defaultScale = gameObject.transform.localScale;
+        gameObject.transform.localScale = new Vector3(0, 0, 0);
+    }
+
     private void OnEnable()
     {
         if(_follower==null)
@@ -63,6 +70,9 @@ public class Cake : MonoBehaviour
         _lastTag = null;
         _isMovingToOrderTable = false;
         SetMaterial(_defaultMaterial);
+
+        //Debug.Log(gameObject.transform.localScale+" onenable");
+        iTween.ScaleTo(gameObject, _defaultScale, 1f);
     }
 
     private void Update()
@@ -114,8 +124,9 @@ public class Cake : MonoBehaviour
 
     private void DestroyCake()
     {
-      
 
+        //gameObject.transform.localScale = new Vector3(0, 0, 0);
+        Debug.Log(gameObject.transform.localScale+" dectroy");
         //TODO
         GameManager.GameOver();
 
@@ -124,6 +135,7 @@ public class Cake : MonoBehaviour
 
     private void DisableCake()
     {
+        gameObject.transform.localScale = new Vector3(0, 0, 0);
         gameObject.SetActive(false);
     }
 
@@ -228,7 +240,7 @@ public class Cake : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = _color;
-        Gizmos.DrawSphere(transform.position, 0.3f);
+        //Gizmos.DrawSphere(transform.position, 0.3f);
 
         Vector3 a = new Vector3(transform.position.x, transform.position.y+2, transform.position.z);
         GUIStyle style = new GUIStyle();

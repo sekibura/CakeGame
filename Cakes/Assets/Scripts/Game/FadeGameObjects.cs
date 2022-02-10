@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class FadeGameObjects : MonoBehaviour
 {
-    public void FadeIn(GameObject gameObject)
+    public  void FadeIn(GameObject gameObject, float time)
     {
         SetMaterialTransparent(gameObject);
-        iTween.FadeTo(gameObject, 0, 1);
+        iTween.FadeTo(gameObject, 0, time);
     }
 
-    public void FadeOut(GameObject gameObject)
+    public void FadeOut(GameObject gameObject, float time)
     {
-        iTween.FadeTo(gameObject, 1, 1);
-        Invoke("SetMaterialOpaque", 1.0f);
+        iTween.FadeTo(gameObject, 1, time);
+        Invoke("SetMaterialOpaque", time);
     }
 
     private void SetMaterialTransparent(GameObject gameObject)
     {
-        try
-        {
-            var materials = gameObject.GetComponent<Renderer>();
-            if (materials != null)
-                foreach (var material in materials.materials)
+        var materials = gameObject.GetComponent<Renderer>();
+        if (materials != null)
+            foreach (var material in materials.materials)
+            {
+                try
                 {
                     material.SetFloat("_Mode", 2);
                     material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
@@ -33,8 +33,10 @@ public class FadeGameObjects : MonoBehaviour
                     material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
                     material.renderQueue = 3000;
                 }
-        }
-        catch{}
+                catch { }
+                    
+            }
+      
 
         if (gameObject.transform.childCount > 0)
         {
@@ -49,11 +51,11 @@ public class FadeGameObjects : MonoBehaviour
 
     private void SetMaterialOpaque(GameObject gameObject)
     {
-        try
-        {
-            var materials = gameObject.GetComponent<Renderer>();
-            if (materials != null)
-                foreach (var material in materials.materials)
+        var materials = gameObject.GetComponent<Renderer>();
+        if (materials != null)
+            foreach (var material in materials.materials)
+            {
+                try
                 {
                     material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
                     material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
@@ -63,7 +65,9 @@ public class FadeGameObjects : MonoBehaviour
                     material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
                     material.renderQueue = -1;
                 }
-        }catch{}
+                catch { }
+            }
+        
 
         if (gameObject.transform.childCount > 0)
         {
@@ -76,6 +80,30 @@ public class FadeGameObjects : MonoBehaviour
 
       
     }
+    #region with delay
+    public void FadeIn(GameObject gameObject, float time, float delay)
+    {
+        StartCoroutine(FadeInWithDelay(gameObject, time, delay));
+    }
 
- 
+    private IEnumerator FadeInWithDelay(GameObject gameObject,float time, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SetMaterialTransparent(gameObject);
+        iTween.FadeTo(gameObject, 0, time);
+    }
+
+    public void FadeOut(GameObject gameObject, float time, float delay)
+    {
+        StartCoroutine(FadeOutWithDelay(gameObject, time, delay));
+    }
+
+    private IEnumerator FadeOutWithDelay(GameObject gameObject, float time, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        iTween.FadeTo(gameObject, 1, time);
+        Invoke("SetMaterialOpaque", time);
+    }
+
+    #endregion
 }

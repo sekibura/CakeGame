@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\UI\CurvedText\TextProOnACurve.cs" />
     <Compile Include="Assets\Scripts\Test\Follower.cs" />
     <Compile Include="Assets\Shaders\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Scripts\Game\MainCameraBeh.cs" />
     <Compile Include="Assets\Shaders\PostProcessing\Runtime\Models\UserLutModel.cs" />
     <Compile Include="Assets\Shaders\PostProcessing\Runtime\Components\BloomComponent.cs" />
     <Compile Include="Assets\Shaders\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
@@ -141,11 +142,12 @@
     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\Shaders\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
     <Compile Include="Assets\Scripts\Ads\InterstitialAd.cs" />
+    <Compile Include="Assets\Scripts\Game\FadeGameObjects.cs" />
     <Compile Include="Assets\Scripts\Game\GameManagerScript.cs" />
     <Compile Include="Assets\Shaders\PostProcessing\Runtime\Models\DitheringModel.cs" />
     <Compile Include="Assets\Scripts\Input\SwipeInput.cs" />
-    <Compile Include="Assets\Scripts\Game\FadeGameObjects.cs" />
-    <Compile Include="Assets\Scripts\Game\MainCameraBeh.cs" />
+    <Compile Include="Assets\Scripts\Game\Peoples.cs" />
+    <Compile Include="Assets\Scripts\Game\OnePeople.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

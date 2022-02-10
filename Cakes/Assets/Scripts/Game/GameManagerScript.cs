@@ -65,13 +65,22 @@ public class GameManagerScript : MonoBehaviour
     private GamePlayUI _gamePlayUI;
     #endregion
 
+    [Header("Order")]
     [SerializeField]
     private GameObject _leftOrderBox;
     [SerializeField]
     private GameObject _rightOrderBox;
+    private FadeGameObjects _fader;
+    [SerializeField]
+    private Peoples _peoples;
+
+
+    [SerializeField]
+    private float _delayToStart = 2f;
 
     private void Start()
     {
+        _fader = FindObjectOfType<FadeGameObjects>();
         ScoreSystem.CurrentScore = 0;
         ScoreSystem.CurrentMoney = 0;
 
@@ -83,6 +92,11 @@ public class GameManagerScript : MonoBehaviour
         InitPools();
         InitCakes();
         InitPipeQueue();
+
+        Invoke("ActivateGame", _delayToStart);
+    }
+    private void ActivateGame()
+    {
         _isReadyForUpdate = true;
     }
     private void InitCakesResources()
@@ -352,14 +366,20 @@ public class GameManagerScript : MonoBehaviour
 
     private void FinishOrderAnimation(Sides sides)
     {
+        
         if (sides == Sides.Left)
         {
             _leftOrderBox.GetComponent<Animator>().Play("FinishOrder");
+            _fader.FadeIn(_leftOrderBox, 0.4f, 0.3f);
+            _fader.FadeOut(_leftOrderBox, 0.3f, 1f);
         }
         else if (sides == Sides.Right)
         {
             _rightOrderBox.GetComponent<Animator>().Play("FinishOrder");
+            _fader.FadeIn(_rightOrderBox, 0.4f, 0.3f);
+            _fader.FadeOut(_rightOrderBox, 0.3f, 1f);
         }
+        _peoples.Shift(sides);
     }
 
     //очки за законченный заказ
