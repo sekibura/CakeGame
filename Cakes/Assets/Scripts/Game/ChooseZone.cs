@@ -7,7 +7,9 @@ public class ChooseZone : MonoBehaviour
 {
     private Cake _currentCake = null;
     [SerializeField]
-    private Image _currentCakeIcon;
+    private Image _currentCakeIconFace;
+    [SerializeField]
+    private Image _currentCakeIconBack;
 
     [SerializeField]
     private MeshRenderer __borderIn;
@@ -20,10 +22,19 @@ public class ChooseZone : MonoBehaviour
     [SerializeField]
     private bool _isBorderOn = false;
 
+    [Header("Calc % of path")]
+    [SerializeField]
+    private Axis _axisMovement;
+    [SerializeField]
+    private Transform _pointStart;
+    [SerializeField]
+    private Transform _pointFinish;
+
 
     private void Start()
     {
-        _currentCakeIcon.enabled = false;
+        _currentCakeIconFace.enabled = false;
+        _currentCakeIconBack.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,15 +43,58 @@ public class ChooseZone : MonoBehaviour
         if (cake != null)
         {
             _currentCake = cake;
-            _currentCakeIcon.sprite = cake.GetSprite();
-            _currentCakeIcon.enabled = true;
-            if (_isBorderOn)
-            {
-                __borderIn.material = _green;
-                __borderOut.material = _green;
-            }
+            _currentCakeIconFace.sprite = cake.GetSprite();
+            _currentCakeIconFace.enabled = true;
+            _currentCakeIconBack.sprite = cake.GetSprite();
+            _currentCakeIconBack.enabled = true;
+            //_currentCakeIconFace.fillAmount = 100 - CalculatePercentDistance(cake.gameObject);
+
+            //if (_isBorderOn)
+            //{
+              //  __borderIn.material = _green;
+                //__borderOut.material = _green;
+            //}
             
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        _currentCakeIconFace.fillAmount = 1- CalculatePercentDistance(other.gameObject)/100;
+    }
+
+    private float CalculatePercentDistance(GameObject currentCake)
+    {
+        float fullDistance = 0f;
+        float currentDistance = 0f;
+        float result = 0f;
+        switch (_axisMovement)
+        {
+            case Axis.X:
+                {
+                    fullDistance = _pointFinish.position.x - _pointStart.position.x;
+                    currentDistance = currentCake.transform.position.x - _pointStart.position.x;
+                    result = currentDistance/(fullDistance/100); 
+                    
+                }
+                break;
+            case Axis.Y:
+                {
+                    fullDistance = _pointFinish.position.y - _pointStart.position.y;
+                    currentDistance = currentCake.transform.position.y - _pointStart.position.y;
+                    result = currentDistance / (fullDistance / 100);
+                }
+                break;
+            case Axis.Z:
+                {
+                    fullDistance = _pointFinish.position.z - _pointStart.position.z;
+                    currentDistance = currentCake.transform.position.z - _pointStart.position.z;
+                    result = currentDistance / (fullDistance / 100);
+                }
+                break;
+        }
+        Debug.Log("reult = " + result);
+        return result;
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -49,7 +103,8 @@ public class ChooseZone : MonoBehaviour
         if (cake != null)
         {
             _currentCake = null;
-            _currentCakeIcon.enabled = false;
+            _currentCakeIconFace.enabled = false;
+            _currentCakeIconBack.enabled = false;
 
             if (_isBorderOn)
             {
@@ -74,4 +129,11 @@ public class ChooseZone : MonoBehaviour
         }
     }
 
+}
+
+public enum Axis
+{
+    X,
+    Y,
+    Z
 }

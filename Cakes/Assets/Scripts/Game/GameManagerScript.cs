@@ -76,7 +76,7 @@ public class GameManagerScript : MonoBehaviour
 
 
     [SerializeField]
-    private float _delayToStart = 2f;
+    private float _delayToStart = 4f;
 
     private void Start()
     {
@@ -500,7 +500,7 @@ public class GameManagerScript : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("restart");
         _gamePlayUI.ToDark();
-        StartCoroutine(ReloadScene(1,"UpdatedGamePlay"));
+        StartCoroutine(ReloadScene(1,"TryNewisometricRoom"));
     }
     public void GoHome()
     {

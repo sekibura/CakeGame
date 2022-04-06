@@ -61,9 +61,14 @@ public class GamePlayUI : MonoBehaviour
 
     public void UpdateScoreAndMoney()
     {
-        _score.text = ScoreSystem.CurrentScore.ToString();
-        //_Maxscore.text = ScoreSystem.Instance.GetMaxScore().ToString();
-        _money.text = ScoreSystem.Instance.GetMoney().ToString();
+        try
+        {
+            _score.text = ScoreSystem.CurrentScore.ToString();
+            //_Maxscore.text = ScoreSystem.Instance.GetMaxScore().ToString();
+            _money.text = ScoreSystem.Instance.GetMoney().ToString();
+        }
+        catch { }
+        
     }
 
     public void GameOver(int currentScore, int maxScore, int coins)
